@@ -1,0 +1,85 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 3 jun. 2022, 20:23:29
+    Author     : Sebas Carballo
+*/
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Blaka+Hollow&family=Open+Sans&display=swap');/*****BLAKA 2*****/
+
+
+*{
+    margin:5;
+    padding:0;
+}
+
+body
+{
+    background-image:url(../images/back.png);
+}
+
+
+.container{
+    height:210vh;
+    width:100%;
+    background-position:center;
+    background-left: 10%;
+    background-right: 10%;
+    box-sizing: border-box;
+    position:relative;
+}
+
+.encabezado{
+
+
+    width: 200%;
+    height: 50px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-top:0px;
+    margin-left:500px;
+    margin-right: 500px;
+    color:white;
+    font-family: 'Blaka Hollow', cursive;
+}
+
+h2{
+
+    color:#009999;
+}
+
+h3{
+
+    color:#009999;
+}
+
+h4{
+
+    color:white;
+}
+
+p{
+
+    color:white;
+}
+
+
+
+
+.body{
+    background-color: gray;
+    width: 100%;
+    height: 300px;
+}
+
+.content p{
+    font-family: 'Blaka Hollow', cursive;
+    font-size:60px;
+    color:blueviolet;
+    margin-left: 450px;
+}
+

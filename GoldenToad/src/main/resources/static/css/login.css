@@ -1,0 +1,55 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 3 jun. 2022, 20:03:41
+    Author     : Sebas Carballo
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    overflow: hidden;
+     background-image:url(../images/back.png);
+
+}
+
+.center{
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:400px;
+    background: blueviolet;
+    transform: translate(-50%,-50%);
+    border-radius:10px;
+    border-shadow: 10px 10px 15px rgba(0,0,0,0,0.05);
+
+}
+
+.center h1{
+
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 30px 0;
+
+}
