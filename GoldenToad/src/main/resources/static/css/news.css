@@ -1,85 +1,118 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
 /* 
-    Created on : 3 jun. 2022, 20:23:29
-    Author     : Sebas Carballo
+    Created on : 2 jun. 2022, 16:28:11
+    Author     : Oscar Sanchez Boza (Hades)
+    Author     : Luciana Madrigal Ocampo
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Open+Sans&display=swap'); /******SANS 1******/
 @import url('https://fonts.googleapis.com/css2?family=Blaka&family=Blaka+Hollow&family=Open+Sans&display=swap');/*****BLAKA 2*****/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");/*****Monserrat*****/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');/*****Roboto*****/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 
 
 *{
-    margin:5;
+    margin:0;
     padding:0;
+}
+
+.content {
+    position: relative;
+    top: 50px;
+    bottom: 50px;
+    padding: 50px;
+    display: inline-block;
+    position: relative;
+    width: 40%;
+    left: 15%;
+    height: 5in;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: content-box;
+}
+
+.content h2{
+    position: relative;
+    font-size: 50in;
 }
 
 body
 {
-    background-image:url(../images/back.png);
+    background-color: #768085;
+    background-image: linear-gradient(160deg, #768085 0%, #0d0e0e 100%);
 }
 
-
-.container{
-    height:210vh;
-    width:100%;
-    background-position:center;
-    background-left: 10%;
-    background-right: 10%;
-    box-sizing: border-box;
-    position:relative;
+a{
+    text-decoration: none;
+    color: white;
 }
 
-.encabezado{
-
-
-    width: 200%;
-    height: 50px;
+.nav-bar h1{
+    font-family: 'Roboto Mono', monospace;
 }
 
-h1{
-    font-size: 40px;
-    font-weight: 100;
-    margin-top:0px;
-    margin-left:500px;
-    margin-right: 500px;
-    color:white;
-    font-family: 'Blaka Hollow', cursive;
-}
-
-h2{
-
-    color:#009999;
-}
-
-h3{
-
-    color:#009999;
-}
-
-h4{
-
-    color:white;
-}
-
-p{
-
-    color:white;
-}
-
-
-
-
-.body{
-    background-color: gray;
+.nav-bar{
+    font-family: "Montserrat", sans-serif;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    color: white;
+    font-size: 20px;
     width: 100%;
-    height: 300px;
+    display: inline-block;
+    align-items: center;
+    left: 50%;
+    box-sizing: border-box;
 }
 
-.content p{
-    font-family: 'Blaka Hollow', cursive;
-    font-size:60px;
-    color:blueviolet;
-    margin-left: 450px;
+
+
+ul li{
+    font-weight: 600;
 }
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+
+}
+
+.logo{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    right: 50%;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.logo img{
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.nombre{
+    display: inline-block;
+    position: relative;
+    right: 44%;
+    bottom: 33px;
+}
+
+.imagen{
+    width:600px;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+    left: 120%;
+    bottom: 5in;
+}
+
+
 

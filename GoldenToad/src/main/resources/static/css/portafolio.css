@@ -1,0 +1,166 @@
+/* 
+    Created on : 2 jun. 2022, 16:28:11
+    Author     : Oscar Sanchez Boza (Hades)
+    Author     : Luciana Madrigal Ocampo
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Open+Sans&display=swap'); /******SANS 1******/
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Blaka+Hollow&family=Open+Sans&display=swap');/*****BLAKA 2*****/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");/*****Monserrat*****/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');/*****Roboto*****/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');/*****Josefin*****/
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');/*****Creepster*****/
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body
+{
+    background-color: #768085;
+    background-image: linear-gradient(160deg, #768085 0%, #0d0e0e 100%);
+}
+
+.juego h1{
+    font-family: 'Creepster', cursive;
+}
+
+.juego p{
+    font-size: 30px;
+    display: inline-block;
+    padding-left: 40px;
+    padding-top: 30px;
+    line-height: 45px;
+}
+
+
+.juego{
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+    width: 40%;
+    height: 20%;
+    left: 5%;
+    top: 60px;
+    color: white;
+    
+}
+
+video{
+    left: 50%;
+    bottom: 70px;
+    display: inline-block;
+    position: relative;
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar h1{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-bar{
+    font-family: "Montserrat", sans-serif;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    left: 50%;
+    box-sizing: border-box;
+}
+
+
+
+ul li{
+    font-weight: 600;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+
+}
+
+.content{
+    position: relative;
+    top: 50px;
+    bottom: 50px;
+    padding: 50px;
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    left: 15%;
+    height: 5in;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: content-box;
+}
+
+
+
+.imagen{
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+}
+
+.logo{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    right: 50%;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.logo img{
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.nombre{
+    display: inline-block;
+    position: relative;
+    right: 44%;
+    bottom: 33px;
+}
+
+.content p{
+    padding-top: 60px;
+    padding-left: 40px;
+    font-size: 30px;
+}
+
+.content h1{
+    position: relative;
+    font-size: 80px;
+}
+
+.imagen{
+    width:600px;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+    left: 120%;
+    bottom: 5in;
+}

@@ -1,86 +1,150 @@
 /* 
     Created on : 2 jun. 2022, 16:28:11
     Author     : Oscar Sanchez Boza (Hades)
+    Author     : Luciana Madrigal Ocampo
 */
 
-/*
-.block
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Open+Sans&display=swap'); /******SANS 1******/
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Blaka+Hollow&family=Open+Sans&display=swap');/*****BLAKA 2*****/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");/*****Monserrat*****/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');/*****Roboto*****/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body
 {
-    background-color: blueviolet;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/BrokenDreamsLandscape.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar h1{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-bar{
+    font-family: "Montserrat", sans-serif;
+    padding: 20px 20px 20px 20px;
+    position: fixed;
+    color: white;
+    font-size: 20px;
     width: 100%;
-    height: 300px;
-    background-position:center;
-    background-left: 10%;
-    background-right: 10%;
-    padding: 20px blue;
-    box-sizing:border-box;
-    margin-top: 0px;
-}*/
-
-
-.static
-{
-    position:static;
-    border:3px solid green;
-    top:400px;
-    left:50px;
+    display: inline-block;
+    align-items: center;
+    left: 50%;
+    box-sizing: border-box;
 }
 
-.relative
-{
-    position:static;
-    border:3px solid green;
-    top:400px;
-    left:50px;  
-    width: 400px;
-    height: 500px;
+
+
+ul li{
+    font-weight: 600;
 }
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+
+}
+
+
+
 
 .imagen{
-    height: 50%;
-    position:absolute;
+    display: inline-block;
+    position: relative;
     bottom: 20px;
-    right: 450px;
 }
 
-.container{
-    height:100vh;
-    width:100%;
-    background-position:center;
-    background-left: 10%;
-    background-right: 10%;
-    background-color:black;
+.logo{
+    display: inline-block;
+    position: relative;
     box-sizing: border-box;
-    position:relative;
-}
-
-.navbar{
-    margin-top:0px;
-    margin-left:900px;
-    margin-bottom: 0px;
-}
-
-.contenido{
-    background-color: black;
-    width: 100%;
-    height: 300px;
-}
-
-.encabezado{
-    background-color: black;
-    width: 100%;
+    right: 50%;
+    top: 20px;
+    width: 50px;
     height: 50px;
+
 }
 
-h1{
-    font-size: 60px;
+.logo img{
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.nombre{
+    display: inline-block;
+    position: relative;
+    right: 44%;
+    bottom: 33px;
+}
+
+.divider{
+    background-color: #525254;
+    background-image: linear-gradient(160deg, #525254 10%, #ffffff 51%);
+    display: inline-block;
+    position: relative;
+    height: 2000px;
+    width: 40%;
+    right: 54%;
+    bottom: 133px;
+    z-index: -1;
+}
+
+.unreal{
+    display: inline-block;
+    position: relative;
+    top: 17%;
+    left: 10%
+}
+.unreal img{
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.content{
+    position: relative;
+    top: 16%;
+    bottom: 50px;
+    padding: 50px;
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    left: 15%;
+    height: 5in;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: content-box;
+}
+
+.content h1{
+    font-size: 70px;
+}
+
+.content p{
+    font-size: 40px;
     font-weight: 100;
-    margin-top:0px;
-    margin-left:350px;
-    color:darkorchid;
 }
-.bienvenida{
-   margin-top:20px;  
-}
-
 

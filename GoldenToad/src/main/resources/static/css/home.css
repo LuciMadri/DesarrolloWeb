@@ -18,9 +18,12 @@
 
 body
 {
-    background-color: #768085;
-    background-image: linear-gradient(160deg, #768085 0%, #0d0e0e 100%);
-
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/BrokenDreamsLandscape.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 a{
@@ -52,7 +55,6 @@ ul li{
 }
 
 nav ul li {
-
     display: inline-block;
     list-style: none;
     margin: 0px 20px;
@@ -72,11 +74,19 @@ nav ul li {
     display: inline-block;
     position: relative;
     width: 30%;
-    left: 20%;
+    left: 15%;
     height: 5in;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: content-box;
+}
+
+
+
+.imagen{
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
 }
 
 .logo{
@@ -122,81 +132,9 @@ nav ul li {
     bottom: 5in;
 }
 
-/*
-.container{
-    height:200vh;
-    width:100%;
-    background-position:center;
-    background-left: 10%;
-    background-right: 10%;
-    box-sizing: border-box;
-    position:relative;
+.goldentoad{
+    position: relative;
+    display: inline-block;
+    top: 30%;
+    width: 50%;
 }
-
-.navbar{
-    height:15vh;
-    width: 100%;
-    margin:auto;
-    display:flex;
-    align-items: center;
-}
-
-.logo{
-    height: 80%;
-    bottom: 10px;
-    right: 10px;
-    left: 20px;
-    margin-left: 20px;
-}
-
-nav{
-    flex:1;
-    padding-left: 60px;
-}
-
-nav ul li{
-    display:inline-block;
-    list-style:none;
-    margin:0px 20px;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color:darkorchid;
-}
-
-
-.content h1{
-    font-size: 30px;
-    font-family: 'Blaka', cursive;
-    font-family: 'Blaka Hollow', cursive;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 85;
-    margin-top:40px;
-    margin-left:40px;
-    margin-right: 40px;
-    margin-bottom: 15px;
-    color:green;
-}
-
-.content p{
-    font-family: 'Blaka Hollow', cursive;
-    font-size:60px;
-    color:blueviolet;
-    margin-left: 450px;
-}
-
-.imagen{
-    height: 35%;
-    position:absolute;
-    bottom:700px;
-    right: 240px;
-}
-
-.banner{
-    height: 50%;
-    bottom: 10px;
-    right: 10px;
-}
-*/
