@@ -97,6 +97,35 @@ nav ul li {
     bottom: 33px;
 }
 
+.content{
+    position: relative;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    color: white;
+    left: 20%;
+    top: 40px;
+}
+
+.content h1{
+     font-weight: 200;
+}
+
+.imgLogo{
+   position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+.imgLogo img{
+   position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    left: 120px;
+    top: 40px;
+}
 
 
 

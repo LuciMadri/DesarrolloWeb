@@ -23,8 +23,25 @@ body
     background-image: linear-gradient(160deg, #768085 0%, #0d0e0e 100%);
 }
 
+.information{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 0px 20px;
+    font-size: 20px;
+    top: 10%;
+    word-spacing: 5px;
+    line-height: 40px;
+    
+    
+}
+
+.information h4{
+    font-weight: 100;
+}
+
 .juego h1{
-    font-family: 'Creepster', cursive;
+    font-size: 80px;
 }
 
 .juego p{
