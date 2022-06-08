@@ -1,0 +1,136 @@
+
+/* 
+    Created on : Jun 7, 2022, 1:10:49 PM
+    Author     : davidcardenas
+*/
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Open+Sans&display=swap'); /******SANS 1******/
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Blaka+Hollow&family=Open+Sans&display=swap');/*****BLAKA 2*****/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");/*****Monserrat*****/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');/*****Roboto*****/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../images/freddyBackground.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar h1{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-bar{
+    font-family: "Montserrat", sans-serif;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    left: 50%;
+    box-sizing: border-box;
+}
+
+ul li{
+    font-weight: 600;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.logo{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    right: 50%;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.logo img{
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.nombre{
+    display: inline-block;
+    position: relative;
+    right: 44%;
+    bottom: 33px;
+}
+
+.form-help {
+  width: 400px;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;;
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-help h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #880808;
+  font-family: "Montserrat", sans-serif;;
+  font-size: 17px;
+  color: white;
+}
+
+.form-help p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-help a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-help a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-help .botons {
+  width: 100%;
+  background: #880808;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
