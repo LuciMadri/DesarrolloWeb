@@ -1,37 +1,58 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+
 <html>
     <head>
-        <title>Login</title>
-        <link rel="stylesheet" href="css/login.css"/>
+        <title>Golden Toad</title>
+        <link rel="stylesheet" href="css/login.css"> <!-- LLamado de la hoja de diseno CSS-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
     </head>
+
     <body>
-        <div class="center">
+        <div class="nav-bar">
 
-            <h1>LOGIN</h1>
-            <form method="post">
-                <div class="txt_field">  
-                    <input type="text" required>
-                    <label>Username</label>
+            <div class="logo">
+                <img src="images/logo.png" alt="banner"/>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="home"><a href="home.html">HOME</a></li>
+                    <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="help.html">HELP</a></li>
+                </ul>
+
+                <div class="nombre">
+                    <h1>Golden Toad</h1>
                 </div>
+            </nav>
+        </div>
 
-                <div class="txt_field">  
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
+        <section class="form-login">
+            <h4>LOG IN</h4>
+            <input class="controls" type="text" name="nombres " id="nombres" placeholder="Enter your nickname">
+            <input class="controls" type="password" name="apellidos " id="apellidos" placeholder="Enter your password">
+            <p>I agree with <a href='#'>Terms and Conditions </a></p>
+            <input class="botons" type= "submit" value="Login">
+            <p><a href="#">Already have an account?</a></p>
+        </section>
 
-                <input type="submit" value="Login">
-
-                <div class="Sign up">
-                    Not a member? <a href="#">Sign up</a>
-
-                </div>
-
-                </body>
-                </html>
+    </body>
+</html>
 
 
 
