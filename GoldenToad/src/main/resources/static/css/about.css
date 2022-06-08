@@ -38,7 +38,7 @@ a{
 .nav-bar{
     font-family: "Montserrat", sans-serif;
     padding: 20px 20px 20px 20px;
-    position: fixed;
+    position: relative;
     color: white;
     font-size: 20px;
     width: 100%;

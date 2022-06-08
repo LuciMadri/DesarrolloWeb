@@ -33,7 +33,7 @@
 
 .content h2{
     position: relative;
-    font-size: 50in;
+    font-size: 50p;
 }
 
 body
@@ -111,7 +111,7 @@ nav ul li {
     display: inline-block;
     position: relative;
     left: 120%;
-    bottom: 5in;
+    bottom: 50px;
 }
 
 
