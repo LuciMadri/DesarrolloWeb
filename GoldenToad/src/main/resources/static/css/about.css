@@ -77,10 +77,9 @@ nav ul li {
 .nombre{
     display: inline-block;
     position: relative;
-    right: 40%;
+    right: 44%;
     bottom: 33px;
 }
-
 
 .content{
     position: relative;
@@ -88,12 +87,8 @@ nav ul li {
     font-family: "Montserrat", sans-serif;
     font-size: 40px;
     color: white;
-    left: 20%;
+/*    left: 20%;*/
     top: 40px;
-}
-
-.content h1{
-     font-weight: 200;
 }
 
 .imgLogo{
@@ -110,6 +105,55 @@ nav ul li {
     height: 200px;
     left: 120px;
     top: 40px;
+}
+
+.us{
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    top: 2in;
+    left: 15%;
+    
+}
+
+.us p{
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    top:30px;
+}
+
+.history{
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    left: 40%;
+    bottom: 8em;
+}
+
+.history p{
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    top:30px;
+}
+
+.services{
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    left: 15%;
+    bottom: 19em;
+}
+
+.services p{
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    top:30px;
 }
 
 
