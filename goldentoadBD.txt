@@ -1,0 +1,42 @@
+CREATE DATABASE GoldenToad;
+USE GoldenToad;
+
+CREATE TABLE userform(
+	id_user INT PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHAR(15) NOT NULL,
+    lastname VARCHAR(15) NOT NULL,
+    age VARCHAR(15) NOT NULL,
+    username VARCHAR(15) NOT NULL,
+    email VARCHAR(15) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    usertype VARCHAR(2) NOT NULL,
+    useradmin BOOLEAN NOT NULL);
+
+CREATE TABLE about(
+	id_about INT PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHAR(15) NOT NULL,
+    lastname VARCHAR(15) NOT NULL,
+    descrip VARCHAR(200) NOT NULL);
+
+CREATE TABLE news(
+	id_news INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(50) NOT NULL,
+    descrip VARCHAR(200) NOT NULL,
+    departure varchar(15));
+    
+CREATE TABLE helpform(
+	id_help INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(15) NOT NULL,
+    email VARCHAR(15) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    descrip VARCHAR(100) NOT NULL,
+    id_user INT NOT NULL,
+    FOREIGN KEY(id_user) REFERENCES userform(id_user));
+
+CREATE TABLE projects(
+	id_projects INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(15) NOT NULL,
+    descrip VARCHAR(200) NOT NULL);
+
+
+    
