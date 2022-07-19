@@ -1,11 +1,10 @@
 package com.goldentoad.repository;
-//Oscar Sanchez Boza
 
-import com.goldentoad.entity.News;
+import com.goldentoad.entity.Userform;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface NewsRepository extends CrudRepository<News,Integer>{
-    News findByTitle(String title);
+public interface UserformRepository extends CrudRepository<Userform,Long> {
+    
 }

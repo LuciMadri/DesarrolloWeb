@@ -1,4 +1,4 @@
-package com.goldentoad.Service;
+package com.goldentoad.service;
 //Oscar Sanchez Boza
 
 import com.goldentoad.entity.About;
@@ -10,5 +10,5 @@ public interface IAboutService {
     public About getAboutById (int id_about);
     public void saveAbout(About about);
     public void delete(int id_about);
-    public About findByFirstName(String firstname);
+    public About findByFirstname(String firstname);
 }

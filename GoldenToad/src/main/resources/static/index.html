@@ -1,7 +1,7 @@
 
 <html>
     <head>
-        <title th:text="#(index.titulo)"> Golden Toad</title>
+        <title th:text="#{index.titulo}"> Golden Toad</title>
         <link rel="stylesheet" href="css/index.css"> <!-- LLamado de la hoja de diseno CSS-->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,17 +27,17 @@
 
             <nav>
                 <ul>
-                    <li class="home" th:text="#(index.titulo10)"><a href="home.html">HOME</a></li>
-                    <li th:text="#(index.titulo4)" ><a href="portafolio.html">PORTAFOLIO</a></li>
-                    <li th:text="#(index.titulo5)"><a href="news.html">NEWS</a></li>
-                    <li th:text="#(index.titulo6)"><a href="login.html">LOGIN</a></li>
-                    <li th:text="#(index.titulo7)"><a href="contact.html">CONTACT</a></li>
-                    <li th:text="#(index.titulo8)"><a href="about.html">ABOUT</a></li>
-                    <li th:text="#(index.titulo9)"><a href="help.html">HELP</a></li>
+                    <li class="home" th:text="#{index.titulo10}"><a href="home.html">HOME</a></li>
+                    <li th:text="#{index.titulo4}" ><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li th:text="#{index.titulo5}"><a href="news.html">NEWS</a></li>
+                    <li th:text="#{index.titulo6}"><a href="login.html">LOGIN</a></li>
+                    <li th:text="#{index.titulo7}"><a href="contact.html">CONTACT</a></li>
+                    <li th:text="#{index.titulo8}"><a href="about.html">ABOUT</a></li>
+                    <li th:text="#{index.titulo9}"><a href="help.html">HELP</a></li>
                 </ul>
 
                 <div class="nombre">
-                    <h1 th:text="#(index.titulo2)"> Golden Toad</h1>
+                    <h1 th:text="#{index.titulo2}"> Golden Toad</h1>
                 </div>
             </nav>
         </div>
@@ -47,11 +47,10 @@
         </div>
 
         <div class="content">
-            <h1 th:text="#(index.titulo3)">Welcome to Golden Toad</h1>
-            <p th:text="#(index.p1)">Start your new experience in video games, with the latest in the market, developed by Costa Rican experts in the area.</p>
+            <h1 th:text="#{index.titulo3}">Welcome to Golden Toad</h1>
+            <p th:text="#{index.p1}">Start your new experience in video games, with the latest in the market, developed by Costa Rican experts in the area.</p>
         </div>
 
     </body>
 </html>
-
 

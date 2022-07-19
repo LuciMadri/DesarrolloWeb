@@ -26,13 +26,13 @@
             </div>
             <nav>
                 <ul>
-                    <li class="home" th:text="#(about.titulo)"><a href="home.html">HOME</a></li>
-                    <li th:text="#(about.titulo1)"><a href="portafolio.html">PORTAFOLIO</a></li>
-                    <li th:text="#(about.titulo2)"><a href="news.html">NEWS</a></li>
-                    <li th:text="#(about.titulo3)"><a href="login.html">LOGIN</a></li>
-                    <li th:text="#(about.titulo4)"><a href="contact.html">CONTACT</a></li>
-                    <li th:text="#(about.titulo5)"><a href="about.html">ABOUT</a></li>
-                    <li th:text="#(about.titulo6)"><a href="help.html">HELP</a></li>
+                    <li class="home" th:text="#{about.titulo}"><a href="home.html">HOME</a></li>
+                    <li th:text="#{about.titulo1}"><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li th:text="#{about.titulo2}"><a href="news.html">NEWS</a></li>
+                    <li th:text="#{about.titulo3}"><a href="login.html">LOGIN</a></li>
+                    <li th:text="#{about.titulo4}"><a href="contact.html">CONTACT</a></li>
+                    <li th:text="#{about.titulo5}"><a href="about.html">ABOUT</a></li>
+                    <li th:text="#{about.titulo6}"><a href="help.html">HELP</a></li>
                 </ul>
 
                 <div class =" nombre">
@@ -45,7 +45,7 @@
             <div class="us">
                 
                 
-                <h1 th:text="#(about.titulo7)">Who are we?</h1>
+                <h1 th:text="#{about.titulo}">Who are we?</h1>
                 <td th:text="${getDescrip}"></td> 
                 
                <!-- <p>We are a small company in Costa Rica. We believe that no matter where you come from,
@@ -53,8 +53,8 @@
             </div>
 
             <div class="history">
-                <h2 th:text="#(about.titulo8)">Where it all started?</h2>
-                <p th:text="#(about.texto)">
+                <h2 th:text="#{about.titulo8}">Where it all started?</h2>
+                <p th:text="#{about.texto}">
                     Isaac the founder of Golden Toad, had a dream to start his own company, 
                     so he started designing his first official video game "Broken Dreams",
                     he traveled to Miami to a conference in which he presented his game and the rest is history.
@@ -62,8 +62,8 @@
             </div>
             
             <div class="services">
-                <h2 th:text="#(about.titulo9)">What do we have to offer?</h2>
-                <p  th:text="#(about.texto1)">
+                <h2 th:text="#{about.titulo9}">What do we have to offer?</h2>
+                <p  th:text="#{about.texto1}">
                     Our services are totally aimed at video game development, 
                     with the Unreal Engine 5 tool, in which we have many
                 </p>

@@ -1,4 +1,4 @@
-package com.goldentoad.Service;
+package com.goldentoad.service;
 //Oscar Sanchez Boza
 
 import com.goldentoad.entity.About;
@@ -33,8 +33,8 @@ public class AboutService implements IAboutService{
     }
 
     @Override
-    public About findByFirstName(String firstname) {
-        return aboutRepository.findByFirstName(firstname);
+    public About findByFirstname(String firstname) {
+        return aboutRepository.findByFirstname(firstname);
     }
    
 }

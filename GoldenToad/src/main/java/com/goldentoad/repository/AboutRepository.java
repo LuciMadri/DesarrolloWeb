@@ -3,8 +3,9 @@ package com.goldentoad.repository;
 
 import com.goldentoad.entity.About;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface AboutRepository extends CrudRepository<About,Integer> {
-    About findByFirstName(String firstName);
+    About findByFirstname(String firstname);
 }

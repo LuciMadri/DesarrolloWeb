@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>Golden Toad</title>
@@ -27,13 +26,13 @@
 
             <nav>
                 <ul>
-                    <li class="home" th:text="#home.titulo7)"><a href="home.html">HOME</a></li>
-                    <li th:text="#home.titulo1)"><a href="portafolio.html">PORTAFOLIO</a></li>
-                    <li th:text="#home.titulo2)"><a href="news.html">NEWS</a></li>
-                    <li th:text="#home.titulo3)"><a href="login.html">LOGIN</a></li>
-                    <li th:text="#home.titulo4)"><a href="contact.html">CONTACT</a></li>
-                    <li th:text="#home.titulo5)"><a href="about.html">ABOUT</a></li>
-                    <li th:text="#home.titulo6)"><a href="help.html">HELP</a></li>
+                    <li class="home" th:text="#{home.titulo7}"><a href="home.html">HOME</a></li>
+                    <li th:text="#{home.titulo1}"><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li th:text="#{home.titulo2}"><a href="news.html">NEWS</a></li>
+                    <li th:text="#{home.titulo3}"><a href="login.html">LOGIN</a></li>
+                    <li th:text="#{home.titulo4}"><a href="contact.html">CONTACT</a></li>
+                    <li th:text="#{home.titulo5}"><a href="about.html">ABOUT</a></li>
+                    <li th:text="#{home.titulo6}"><a href="help.html">HELP</a></li>
                 </ul>
 
                 <div class="nombre">
@@ -43,21 +42,33 @@
         </div>
 
         <div class="content">
-            <h1 th:text="#home.titulo8)">Game Development Company</h1>
-            <p th:text="#home.texto)">Golden Toad - is a company that develops video games founded by gamers, 
+            <h1 th:text="#{home.titulo8}">Game Development Company</h1>
+            <p th:text="#{home.texto}">Golden Toad - is a company that develops video games founded by gamers, 
                 our policy is to develop with the best tools on the market such as 
                 Unreal Engine 5 to obtain the best possible software quality.</p>
             <img src="images/pcGaming.jpg" class='imagen' alt="banner"/>
 
         </div>
 
-        <footer th:fragment="footer" class="footer">
-          
-            <p th:text="#home.texto1)">Derechos Reservados 2022
-            <a th:href="@{/(lang=es)}">ES</a>
-            <a th:href="@{/(lang=en)}">EN</a>    
-            </p>
+       <footer th:fragment="footer">
+            <div class="container">
+                <footer class="py-3 my-4">
+                
+<!--                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                                th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
+                                                class="nav-link px-2 text-muted">ES</a></li>
+                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                                th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
+                                                class="nav-link px-2 text-muted">EN</a></li>
+                    </ul>-->
+                    <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+                    <a th:href="@{/(lang=es)}">ES</a> | 
+                    <a th:href="@{/(lang=en)}">EN</a>
+                </footer>
+            </div>
         </footer>
-        
-        </body>
+
+
+    </body>
+
 </html>

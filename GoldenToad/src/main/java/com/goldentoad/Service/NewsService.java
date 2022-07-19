@@ -1,4 +1,4 @@
-package com.goldentoad.Service;
+package com.goldentoad.service;
 //Oscar Sanchez Boza
 
 import com.goldentoad.entity.News;
