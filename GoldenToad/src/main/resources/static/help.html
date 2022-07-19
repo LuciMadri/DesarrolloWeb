@@ -27,13 +27,13 @@
 
             <nav>
                 <ul>
-                    <li class="home"><a href="home.html">HOME</a></li>
-                    <li><a href="portafolio.html">PORTAFOLIO</a></li>
-                    <li><a href="news.html">NEWS</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="help.html">HELP</a></li>
+                    <li class="home" th:text="#help.titulo7)"><a href="home.html">HOME</a></li>
+                    <li th:text="#help.titulo1)"><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li th:text="#help.titulo2)"><a href="news.html">NEWS</a></li>
+                    <li th:text="#help.titulo3)"><a href="login.html">LOGIN</a></li>
+                    <li th:text="#help.titulo4)"><a href="contact.html">CONTACT</a></li>
+                    <li th:text="#help.titulo5)"><a href="about.html">ABOUT</a></li>
+                    <li th:text="#help.titulo6)"><a href="help.html">HELP</a></li>
                 </ul>
 
                 <div class="nombre">
@@ -43,7 +43,7 @@
         </div>
         
         <section class="form-help">
-            <h4>Help Form</h4>
+            <h4 th:text="#help.titulo8)">Help Form</h4>
             <input class="controls" type="text" name="nombres " id="nombres" placeholder="Enter your name">
             <input class="controls" type="text" name="apellidos " id="apellidos" placeholder="Enter your lastname">
             <input class="controls" type="email" name="correo " id="correo" placeholder="Enter your email">

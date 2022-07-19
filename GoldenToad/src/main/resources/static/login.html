@@ -27,13 +27,13 @@
 
             <nav>
                 <ul>
-                    <li class="home"><a href="home.html">HOME</a></li>
-                    <li><a href="portafolio.html">PORTAFOLIO</a></li>
-                    <li><a href="news.html">NEWS</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="help.html">HELP</a></li>
+                    <li class="home"  th:text="#home.titulo7)"><a href="home.html">HOME</a></li>
+                    <li th:text="#login.titulo1)"><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li th:text="login.titulo2)"><a href="news.html">NEWS</a></li>
+                    <li th:text="#login.titulo3)"><a href="login.html">LOGIN</a></li>
+                    <li th:text="#login.titulo4)"><a href="contact.html">CONTACT</a></li>
+                    <li th:text="#login.titulo5)"><a href="about.html">ABOUT</a></li>
+                    <li th:text="#login.titulo6)"><a href="help.html">HELP</a></li>
                 </ul>
 
                 <div class="nombre">
@@ -43,12 +43,12 @@
         </div>
 
         <section class="form-login">
-            <h4>LOG IN</h4>
+            <h4 th:text="#login.titulo8)">LOG IN</h4>
             <input class="controls" type="text" name="nombres " id="nombres" placeholder="Enter your nickname">
             <input class="controls" type="password" name="apellidos " id="apellidos" placeholder="Enter your password">
             <p>I agree with <a href='#'>Terms and Conditions </a></p>
             <input class="botons" type= "submit" value="Login">
-            <p><a href="#">Don't have an account?</a></p>
+            <p th:text="#login.texto)"><a href="#">Don't have an account?</a></p>
         </section>
 
     </body>
