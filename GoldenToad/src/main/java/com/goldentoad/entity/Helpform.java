@@ -35,11 +35,6 @@ public class Helpform implements Serializable {
 
     //Foreign key
     @JoinColumn(name = "id_user")
-
-    /*Aqui guardamos un objeto de tipo pais porque estamos haciendo una referancia
-	Con un foreign key, el foreign key apunta a otra tabla entonces para obtener el
-	Valor de esa columna esa tabla, ocupamos la referencia*/
-    //Entonces apuntamos a otra entidad en esta caso "Pais"
     private Userform userform;
 
     //Creamos getters y setters

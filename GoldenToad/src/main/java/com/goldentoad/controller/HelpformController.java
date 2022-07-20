@@ -59,7 +59,7 @@ public class HelpformController {
         return "crearHelpform";
     }
 
-    @GetMapping("/saveH")
+    @PostMapping("/saveHelpform")
     public String saveHelpform(@ModelAttribute Helpform helpform) {
         //Con esto lo guardo en la bd
         helpformService.saveHelpform(helpform);

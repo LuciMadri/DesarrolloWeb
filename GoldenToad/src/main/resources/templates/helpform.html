@@ -57,18 +57,11 @@
                 va a ser la siguiente: -->
             <th:block th:each="user : ${helpform}">
                 <tr>
-
-
-
-                    <!-- Entonces agregamos un texto que es sustituido, por user 
-                    .getnombre Entonces, en la clase persona en entity tenemos 
-                    un metodo que nos devuelve el nombre de la persona y asi
-                    para las demas de la variables.-->
                     <td th:text="${user.getUsername}"></td>
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getPhone}"></td>
                     <td th:text="${user.getDescrip}"></td>
-                    <td th:text="${user.getUserform.getId_user}"></td>
+                    <td th:text="${user.getUserform.getUsername}"></td>
 
 
 
