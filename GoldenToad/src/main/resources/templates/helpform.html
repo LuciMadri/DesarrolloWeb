@@ -10,6 +10,8 @@
             header de template, y lo que hay en este header es el nav bar-->
         <header th:replace="plantilla/template::header"></header>
 
+ 
+
         <!-- Esta etiqueta h1 sirve para ponerle un titulo a nuestra tabla
         
             En el text le estamos poniendo nuestra "Variable" que se va a 
@@ -18,8 +20,12 @@
             "Tabla personas"-->
         <h1 th:text="${titulo}"></h1>
 
+ 
+
         <table class="table table-dark table-striped">
             <thead class="thead-dark">
+
+ 
 
                 <!-- tr = table row, o sea una fila -->
                 <tr>
@@ -27,16 +33,20 @@
                     clase persona, ademas de que le agregamos, editar y eliminar
                     -->
                     <!-- th = table head, titulos de la tabla-->
-                    <th scope="col" > Username</th>
-                    <th scope="col" > Email</th>
-                    <th scope="col" > Phone</th>
-                    <th scope="col" > Description</th>
-                    <th scope="col" > User</th>
+                    <th scope="col" th:text="#{cliente.nombre}"> </th>
+                    <th scope="col" th:text="#{cliente.correo}"> </th>
+                    <th scope="col" th:text="#{cliente.telefono}"> </th>
+                    <th scope="col" th:text="#{categoria.descripcion}"> </th>
+                    <th scope="col" th:text="#{cliente.usuario}"> </th>
                 </tr>
             </thead>
 
+ 
+
             <!-- Aqui comienza el cuerpo de nuestra tabla -->
             <tbody>
+
+ 
 
                 <!-- Aqui vamos a usar un th:each, puede verse como un for un while
                 (ciclo), decimos que por cada usuario en personas (variable que 
@@ -44,6 +54,8 @@
                 va a ser la siguiente: -->
             <th:block th:each="user : ${helpform}">
                 <tr>
+
+ 
 
                     <!-- Entonces agregamos un texto que es sustituido, por user 
                     .getnombre Entonces, en la clase persona en entity tenemos 
@@ -54,6 +66,8 @@
                     <td th:text="${user.getPhone}"></td>
                     <td th:text="${user.getDescrip}"></td>
                     <td th:text="${user.getUserform.getId_user}"></td>
+
+ 
 
                     <!-- Aqui agregamos un hipervinculo donde le pasamos el 
                     url que queremos llamar para ejecutar algun metodo
