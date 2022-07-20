@@ -1,7 +1,9 @@
 package com.goldentoad.controller;
 
+import com.goldentoad.Service.IProjectService;
 import com.goldentoad.entity.Helpform;
 import com.goldentoad.entity.News;
+import com.goldentoad.entity.Project;
 import com.goldentoad.entity.Userform;
 import com.goldentoad.service.IHelpformService;
 import com.goldentoad.service.INewsService;
@@ -29,6 +31,10 @@ public class HelpformController {
 
     @Autowired
     private INewsService newsService;
+    
+    @Autowired
+     private IProjectService projectService;
+
     /*El GetMapping crea la ruta, entonces al escribir localhost/persona 
     nos ejecuta el metodo
      */
@@ -114,4 +120,51 @@ public class HelpformController {
         model.addAttribute("userform", listUserform);
         return "create";
     } 
+    
+    // ---------------------- Projects -----------------------------
+    
+     @GetMapping("/projects")
+    //Puede ser cualquier nombre en vez de INDEX
+    /*Aqui le pasamos un objeto de tipo model, ya que le pasamos informacion
+    que puede ser sustituida ya que proviene de la bd, entonces la forma en la
+    que le pasamos esos valores es por el objeto de tipo model*/
+    public String project(Model model) {
+        /*Aqui creamos una lista y le pasamos la informacion por medio del metodo
+          getAllPersona de nuestra clase interface.*/
+        List<Project> listProject = projectService.getAllProject();
+
+        /*Aqui, en nuestro html donde se encuentre la palabra titulo lo va a 
+          sustituir por tabla persona*/
+        model.addAttribute("titulo", "Projects Table");
+
+        /*Aqui, en nuestro html donde se encuentre la palabra personas lo va a 
+         sustituir por la listaPersona*/
+        model.addAttribute("project", listProject);
+
+        //Aqui retornamos un html que se llama personas.
+        return "projects";
+    }
+    
+    @GetMapping("/saveProject")
+    public String saveProject(@ModelAttribute Project project){
+        //Con esto lo guardo en la bd
+        projectService.saveProject(project);
+        
+        //Aqui quiero que me redirija a otro get mapping
+        return "redirect:/projects";
+    }
+    
+    // Aqui en editar solo se esta usando project
+    @GetMapping("/editProject/{id_projects}")
+    public String editProject(@PathVariable("id_projects") Integer idProject, Model model){
+        Project project = projectService.getProjectById(idProject);
+        model.addAttribute("project", project);
+        return "create";
+    } 
+    
+      @GetMapping("/deleteProject/{id_projects}")
+    public String deleteProject(@PathVariable("id_projects") Integer idProject) {
+        projectService.delete(idProject); 
+        return "redirect:/projects";
+    }
 }
