@@ -102,8 +102,10 @@ public class HelpformController {
     } 
     
     //==========================================================================
+    //--------------------------- Helpform -------------------------------------
+    //==========================================================================
     
-    @GetMapping("/save")
+    @GetMapping("/saveH")
     public String saveHelpform(@ModelAttribute Helpform helpform){
         //Con esto lo guardo en la bd
         helpformService.saveHelpform(helpform);
@@ -121,31 +123,28 @@ public class HelpformController {
         return "create";
     } 
     
-    // ---------------------- Projects -----------------------------
+    //==========================================================================
+    //--------------------------- Projects -------------------------------------
+    //==========================================================================
     
      @GetMapping("/projects")
-    //Puede ser cualquier nombre en vez de INDEX
-    /*Aqui le pasamos un objeto de tipo model, ya que le pasamos informacion
-    que puede ser sustituida ya que proviene de la bd, entonces la forma en la
-    que le pasamos esos valores es por el objeto de tipo model*/
     public String project(Model model) {
-        /*Aqui creamos una lista y le pasamos la informacion por medio del metodo
-          getAllPersona de nuestra clase interface.*/
         List<Project> listProject = projectService.getAllProject();
-
-        /*Aqui, en nuestro html donde se encuentre la palabra titulo lo va a 
-          sustituir por tabla persona*/
         model.addAttribute("titulo", "Projects Table");
-
-        /*Aqui, en nuestro html donde se encuentre la palabra personas lo va a 
-         sustituir por la listaPersona*/
         model.addAttribute("project", listProject);
 
         //Aqui retornamos un html que se llama personas.
         return "projects";
     }
     
-    @GetMapping("/saveProject")
+    //Crear una persona nueva CRUD
+    @GetMapping("/projectN")
+    public String crearProject(Model model){
+        model.addAttribute("projects",new Project());
+        return "crearProjects";
+    } 
+    
+    @PostMapping("/saveProject")
     public String saveProject(@ModelAttribute Project project){
         //Con esto lo guardo en la bd
         projectService.saveProject(project);
@@ -158,13 +157,15 @@ public class HelpformController {
     @GetMapping("/editProject/{id_projects}")
     public String editProject(@PathVariable("id_projects") Integer idProject, Model model){
         Project project = projectService.getProjectById(idProject);
-        model.addAttribute("project", project);
-        return "create";
+        model.addAttribute("projects", project);
+        return "crearProjects";
     } 
     
-      @GetMapping("/deleteProject/{id_projects}")
-    public String deleteProject(@PathVariable("id_projects") Integer idProject) {
+    
+    @GetMapping("/deleteProject/{id_projects}")
+    public String eliminarProject(@PathVariable("id_projects") Integer idProject) {
         projectService.delete(idProject); 
         return "redirect:/projects";
     }
+    
 }

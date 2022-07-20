@@ -9,19 +9,19 @@
                <tr>
                    <th scope="col" th:text="#{cliente.titulo}"> </th>
                    <th scope="col" th:text="#{cliente.descripcion}"> </th>
-                   <th scope="col" th:text="#{cliente.eliminar}"> </th>
-                   <th scope="col" th:text="#{cliente.editar}"> </th>
+                   <th scope="col" th:text="#{articulo.newsid}"></th>
                </tr>
            </thead>
            <tbody>
                <th:block th:each="user : ${project}">
                   <td th:text="${user.getTitle}"></td>
                   <td th:text="${user.getDescrip}"></td>
+                  <td th:text="${user.getId_projects}"></td>
                  <td>
                       <a th:href="@{/editProject/{id}(id=${user.getId_projects})}">Edit</a>
                   </td>
                   <td>
-                      <a th:href="@{/delete/{id}(id=${user.getId_projects})}">Delete</a>
+                      <a th:href="@{/deleteProject/{id}(id=${user.getId_projects})}">Delete</a>
                   </td>
 
              </tr>
