@@ -1,8 +1,10 @@
 package com.goldentoad.controller;
 
 import com.goldentoad.entity.Helpform;
+import com.goldentoad.entity.News;
 import com.goldentoad.entity.Userform;
 import com.goldentoad.service.IHelpformService;
+import com.goldentoad.service.INewsService;
 import com.goldentoad.service.IUserformService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 //Definimos de que tipo de objeto va a ser nuestra clase
 @Controller
@@ -24,6 +27,8 @@ public class HelpformController {
     @Autowired
     private IUserformService userformService;
 
+    @Autowired
+    private INewsService newsService;
     /*El GetMapping crea la ruta, entonces al escribir localhost/persona 
     nos ejecuta el metodo
      */
@@ -38,6 +43,7 @@ public class HelpformController {
         /*Aqui creamos una lista y le pasamos la informacion por medio del metodo
           getAllPersona de nuestra clase interface.*/
         List<Helpform> listHelpform = helpformService.getAllHelpform();
+        
 
         /*Aqui, en nuestro html donde se encuentre la palabra titulo lo va a 
           sustituir por tabla persona*/
@@ -50,6 +56,46 @@ public class HelpformController {
         //Aqui retornamos un html que se llama personas.
         return "helpform";
     }
+    
+    //==========================================================================
+    //===============================NEWS=======================================
+    //==========================================================================
+    @GetMapping("/newsN")
+    public String news(Model model){
+        List<News>listNews = newsService.getAllNews();
+        model.addAttribute("titulo", "News Table");
+        model.addAttribute("news", listNews);
+        return "newsN";
+    }
+    
+    //Crear una persona nueva CRUD
+    @GetMapping("/crearNews")
+    public String crearNews(Model model){
+        model.addAttribute("news",new News());
+        return "crearNews";
+    } 
+    
+    @PostMapping("/save")
+    public String guardarNews(@ModelAttribute News news){
+        newsService.saveNews(news);
+        return "redirect:/newsN";
+    }
+    
+    @GetMapping("/editNews/{id_news}")
+    public String editarNews(@PathVariable("id_news")Integer idNews,Model model)
+    {
+        News news = newsService.getNewsById(idNews);
+        model.addAttribute("news",news);
+        return "crearNews";
+    }
+    
+    @GetMapping("/delete/{id_news}")
+    public String eliminarNews(@PathVariable("id_news")Integer idNews){
+        newsService.delete(idNews);
+        return "redirect:/newsN";
+    } 
+    
+    //==========================================================================
     
     @GetMapping("/save")
     public String saveHelpform(@ModelAttribute Helpform helpform){

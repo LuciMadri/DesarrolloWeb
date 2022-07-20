@@ -6,9 +6,9 @@ import java.util.List;
 
 
 public interface INewsService {
-    public List<News>listAbout();
-    public News getAboutById (int id_news);
-    public void saveAbout(News news);
+    public List<News>getAllNews();
+    public News getNewsById (int id_news);
+    public void saveNews(News news);
     public void delete(int id_news);
     public News findByTitle(String title);
 }

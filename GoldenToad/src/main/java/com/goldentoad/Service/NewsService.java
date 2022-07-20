@@ -11,21 +11,7 @@ import org.springframework.stereotype.Service;
 public class NewsService implements INewsService{
     @Autowired
     private NewsRepository newsRepository;
-    @Override
-    public List<News> listAbout() {
-        return (List<News>)newsRepository.findAll();
-    }
-
-    @Override
-    public News getAboutById(int id_news) {
-        return newsRepository.findById(id_news).orElse(null);
-    }
-
-    @Override
-    public void saveAbout(News news) {
-        newsRepository.save(news);
-    }
-
+    
     @Override
     public void delete(int id_news) {
         newsRepository.deleteById(id_news);
@@ -34,6 +20,21 @@ public class NewsService implements INewsService{
     @Override
     public News findByTitle(String title) {
         return newsRepository.findByTitle(title);
+    }
+
+    @Override
+    public News getNewsById(int id_news) {
+        return newsRepository.findById(id_news).orElse(null);
+    }
+
+    @Override
+    public void saveNews(News news) {
+        newsRepository.save(news);
+    }
+
+    @Override
+    public List<News> getAllNews() {
+       return (List<News>)newsRepository.findAll();
     }
     
 }

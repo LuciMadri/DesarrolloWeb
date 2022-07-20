@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template::head"></head>
+    <body>
+        <header th:replace="plantilla/template::header"></header>
+        <h1 th:text="${titulo}"></h1>
+        <table class="table table-dark table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" th:text="#{articulo.titulo_news}"></th>
+                    <th scope="col" th:text="#{articulo.descripcion}"></th>
+                    <th scope="col" th:text="#{articulo.fechasalida}"></th>
+                    <th scope="col" th:text="#{articulo.newsid}"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            <th:block th:each="user : ${news}">
+                <tr>
+
+                    <td th:text="${user.getTitle}"></td>
+                    <td th:text="${user.getDescrip}"></td>
+                    <td th:text="${user.getDeparture}"></td>
+                    <td th:text="${user.getId_news}"></td>
+
+                    <td>
+                        <a th:href="@{/editNews/{id}(id=${user.getId_news})}">Edit</a>
+                    <td>
+                    <td>
+                        <a th:href="@{/delete/{id}(id=${user.getId_news})}">Delete</a>
+                    </td> 
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+        
+        <footer th:replace="plantilla/template::footer">
+           
+        </footer>
+</html>
