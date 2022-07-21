@@ -23,5 +23,5 @@ public interface IHelpformService {
     
     //Este metodo va a guardar el id y va a buscar el que tenga el mismo
     //y eliminarlo
-    public void delete(long id_helpform);
+    public void deleteById(long id_helpform);
 }

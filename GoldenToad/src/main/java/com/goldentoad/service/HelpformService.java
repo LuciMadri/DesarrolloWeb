@@ -43,7 +43,7 @@ public class HelpformService implements IHelpformService{
     }
 
     @Override
-    public void delete(long id_helpform) {
+    public void deleteById(long id_helpform) {
         //Eliminamos por id
         helpformRepository.deleteById(id_helpform);
     }

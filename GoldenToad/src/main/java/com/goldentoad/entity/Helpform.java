@@ -24,7 +24,6 @@ public class Helpform implements Serializable {
     //Con esta valor decimos que nuestra id va a obtener un valor autoincremental.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_help;
-
     private String username;
     private String email;
     private String phone;

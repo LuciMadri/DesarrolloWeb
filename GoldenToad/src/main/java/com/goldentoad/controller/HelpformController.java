@@ -73,9 +73,9 @@ public class HelpformController {
     @GetMapping("/editHelpform/{id_help}")
     public String editHelpform(@PathVariable("id_help") Long idHelp, Model model) {
         Helpform helpform = helpformService.getHelpformById(idHelp);
-        List<Userform> listUserform = userformService.listUser();
+        List<Userform> listUser = userformService.listUser();
         model.addAttribute("helpform", helpform);
-        model.addAttribute("userform", listUserform);
+        model.addAttribute("users", listUser);
         return "crearHelpform";
         
         
@@ -83,7 +83,7 @@ public class HelpformController {
     
     @GetMapping("/deleteHelpform/{id_help}")
     public String eliminarHelpform(@PathVariable("id_help") Integer idhelp) {
-        projectService.delete(idhelp);
+        helpformService.deleteById(idhelp);
         return "redirect:/helpform";
     }
 
