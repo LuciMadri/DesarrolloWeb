@@ -63,7 +63,7 @@
                             <label class="form-control-sm col-form-label col-md-2" for="username">Users</label>
                             <div class="col-sm-10">
                                 <select th:field="*{Userform}" class="form-control form-control-sm col-md-6" id="userform" aria-describedby="emailHelp">
-                                    <option th:each="x:${userform}"
+                                    <option th:each="x:${users}"
                                             th:value="${x.id_user}"
                                             th:text="${x.username}"/>
                                 </select>
