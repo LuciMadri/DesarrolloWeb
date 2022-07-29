@@ -35,8 +35,6 @@ public class HelpformController {
     @Autowired
     private IProjectService projectService;
 
-    
-    
     //==========================================================================
     //--------------------------- Helpform -------------------------------------
     //==========================================================================
@@ -50,17 +48,15 @@ public class HelpformController {
         model.addAttribute("helpform", listHelpform);
         return "helpform";
     }
-    
+
     @GetMapping("/helpformN")
-    public String createHelpform(Model model){
+    public String createHelpform(Model model) {
         List<Userform> listUsers = userformService.listUser();
-        model.addAttribute("helpform", new Helpform());       
+        model.addAttribute("helpform", new Helpform());
         model.addAttribute("users", listUsers);
         return "crearHelpform";
     }
 
-   
-    
     @PostMapping("/saveHelpform")
     public String saveHelpform(@ModelAttribute Helpform helpform) {
         //Con esto lo guardo en la bd
@@ -77,10 +73,9 @@ public class HelpformController {
         model.addAttribute("helpform", helpform);
         model.addAttribute("users", listUser);
         return "crearHelpform";
-        
-        
+
     }
-    
+
     @GetMapping("/deleteHelpform/{id_help}")
     public String eliminarHelpform(@PathVariable("id_help") Integer idhelp) {
         helpformService.deleteById(idhelp);
@@ -166,5 +161,56 @@ public class HelpformController {
         projectService.delete(idProject);
         return "redirect:/projects";
     }
+
+    @GetMapping("/home")
+    public String home() {
+
+        return "home";
+    }
+    
+     @GetMapping("/about")
+    public String about() {
+
+        return "about";
+    }
+    
+     @GetMapping("/help")
+    public String help() {
+
+        return "help";
+    }
+    
+     @GetMapping("/index")
+    public String index() {
+
+        return "index";
+    }
+    
+     @GetMapping("/login")
+    public String login() {
+
+        return "login";
+    }
+    
+     @GetMapping("/news")
+    public String news() {
+
+        return "news";
+    }
+    
+     @GetMapping("/portafolio")
+    public String portafolio() {
+
+        return "portafolio";
+    }
+    
+    
+     @GetMapping("/contact")
+    public String contact() {
+
+        return "contact";
+    }
+    
+
 
 }

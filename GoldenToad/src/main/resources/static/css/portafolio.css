@@ -20,7 +20,13 @@
 body
 {
     background-color: #768085;
-    background-image: linear-gradient(160deg, #768085 0%, #0d0e0e 100%);
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/itbackground.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .information{
@@ -32,16 +38,31 @@ body
     top: 10%;
     word-spacing: 5px;
     line-height: 40px;
-    
-    
+
+
 }
 
 .information h4{
+    font-weight: 300;
+}
+
+/*.information h5{
     font-weight: 100;
+   
+}*/
+
+
+
+
+.information p{
+    font-weight: 300;
+    color:darkslategrey;
+
 }
 
 .juego h1{
     font-size: 80px;
+
 }
 
 .juego p{
@@ -60,17 +81,19 @@ body
     font-size: 60px;
     width: 40%;
     height: 20%;
-    left: 5%;
+    left: 25%;
+    /*        left: 5%;*/
     top: 60px;
     color: white;
-    
+
 }
 
 video{
-    left: 50%;
-    bottom: 70px;
+    left: 35%;
+    bottom: -35px;
     display: inline-block;
     position: relative;
+
 }
 
 
@@ -180,4 +203,135 @@ nav ul li {
     position: relative;
     left: 120%;
     bottom: 5in;
+}
+
+
+
+card{
+
+    width: 400px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    ;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+
+card h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+card p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.accordion controls {
+    width: 10%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #880808;
+    font-family: "Montserrat", sans-serif;
+    ;
+    font-size: 17px;
+    color: white;
+}
+
+.accordion accordion-item {
+    width: 10%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #880808;
+    font-family: "Montserrat", sans-serif;
+    ;
+    font-size: 17px;
+    color: white;
+}
+
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+    font-size: 1rem;
+    color: var(--bs-accordion-btn-color);
+    text-align: left;
+    background-color: var(--bs-accordion-btn-bg);
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: var(--bs-accordion-transition);
+}
+
+.accordion-item {
+    color: var(--bs-accordion-color);
+    background-color: var(--bs-accordion-bg);
+    border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+}
+
+
+.col-sm-6 {
+    flex: 0 0 auto;
+    width: 400;
+}
+
+tarjetas{
+    left: 50%;
+    bottom: 400px;
+    display: inline-block;
+    position: relative;
+}
+
+
+video {
+ 
+    style: "height: 5000px; top: 0px; width: 1500px; left: 0px;"
+}
+
+
+
+.container{
+
+    /*    font-family: 'Josefin Sans', sans-serif;
+        position: relative;
+        display: inline-block;
+        font-size: 20px;
+        width: 40%;
+        height: 20%;
+        left: 47%;
+                left: 5%;
+        top: 60px;
+        color: greenyellow;*/      
+    
+    
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+    font-weight: 600;
+
+
+    font-family: "Montserrat", sans-serif;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    left: 46%;
+    box-sizing: border-box;
 }
