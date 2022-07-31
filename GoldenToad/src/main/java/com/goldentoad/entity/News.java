@@ -13,8 +13,8 @@ public class News {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id_news;
     private String title;
-    private String descrip;
-    private String departure;
+    private String subtitle;
+    private String link;
 
     public int getId_news() {
         return id_news;
@@ -32,22 +32,23 @@ public class News {
         this.title = title;
     }
 
-    public String getDescrip() {
-        return descrip;
+    public String getSubtitle() {
+        return subtitle;
     }
 
-    public void setDescrip(String descrip) {
-        this.descrip = descrip;
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
     }
 
-    public String getDeparture() {
-        return departure;
+    public String getLink() {
+        return link;
     }
 
-    public void setDeparture(String departure) {
-        this.departure = departure;
+    public void setLink(String link) {
+        this.link = link;
     }
-    
+
+   
     
     
 }

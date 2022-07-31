@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Golden Toad</title>
+        <link rel="stylesheet" href="css/news.css"> <!-- LLamado de la hoja de diseno CSS-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="images/logo.png" alt="banner"/>
+            </div>
+
+            <nav>
+                <ul>
+                    <li> <a th:text="#{home.titulo7}" th:href="home"></a></li>
+                    <li> <a th:text="#{home.titulo1}" th:href="portafolio"></a></li>
+                    <li> <a th:text="#{home.titulo2}" th:href="news"></a></li>
+                    <li> <a th:text="#{home.titulo3}" th:href="login.html"></a></li>
+                    <li> <a th:text="#{home.titulo4}" th:href="contact"></a></li>
+                    <li> <a th:text="#{home.titulo5}" th:href="about.html"></a></li>
+                    <li> <a th:text="#{home.titulo6}" th:href="help.html"></a></li>
+                </ul>
+
+                <div class="nombre">
+                    <h1>Golden Toad</h1>
+                </div>
+            </nav>
+        </div>
+
+        <div class="noticia1">
+
+
+            <div class="importante">
+                <h1 th:text="#{news.texto}">THE IMPORTANT:</h1>
+            </div>
+
+            <div class="titulo">
+                <h1 th:text="#{news.texto1}">Broken Dreams</h1>
+            </div>
+
+
+            <div class="text">
+                <p th:text="#{news.texto2}">
+                    What are the new updates for Broken Dreams?
+                </p>
+            </div>
+
+            <div class="boton">
+                <input class="botons" type= "submit" value="MORE..">
+            </div>
+
+        </div>
+
+        <div class="recentarticles">
+            <div>
+                <h1 th:text="#{news.texto3}">
+                    RECENT ARTICLES
+                </h1>
+            </div>
+            <div class="separador">
+            </div>
+
+            <!--------------------------------------------------------------------->
+            <!----------------------News Image Form Text--------------------------->
+            <!--------------------------------------------------------------------->
+
+            <table class="table table-dark table-striped">
+                <thead class="thead-dark">
+                    <tr style="display: none;">
+                        <th scope="col" th:text="#{articulo.titulo_news}"></th>
+                        <th scope="col" th:text="#{articulo.descripcion}"></th>
+                        <th scope="col" th:text="#{articulo.fechasalida}"></th>
+                        <th scope="col" th:text="#{articulo.newsid}"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                <th:block th:each="user : ${news}">
+                    <tr style="display: none;">
+
+                        <td th:text="${user.getTitle}"></td>
+                        <td th:text="${user.getSubtitle}"></td>
+                        <td th:text="${user.getLink}"></td>
+                        <td th:text="${user.getId_news}"></td>
+
+                        <td>
+                            <a th:href="@{/editNews/{id}(id=${user.getId_news})}">Edit</a>
+                        <td>
+                        <td>
+                            <a th:href="@{/delete/{id}(id=${user.getId_news})}">Delete</a>
+                        </td> 
+                    </tr>
+
+                    <tr>
+                    <div class="separador">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img th:src="${user.getLink}" class="img-fluid rounded-start" alt="banner">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" th:text="${user.getTitle}"></h5>
+                                        <p ng-repeat="news"></p>
+                                        <p class="card-text"><small class="text-muted" th:text="${user.getSubtitle}"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    </tr>
+
+                </th:block>
+                </tbody>
+            </table>
+
+            <!--------------------------------------------------------------------->
+            <!--------------------------------------------------------------------->
+
+        </div>
+    </body>
+</html>

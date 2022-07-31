@@ -199,10 +199,15 @@ input{
     position: relative;
     display: block;
     background-color: white;
-    width: 50%;
-    height: 70em;
+    width:50%;
+    height: 100em;
     top: 10em;
 
+}
+
+.separador{
+    top:10em;
+    height:10em;
 }
 
 .recentarticles h1{
