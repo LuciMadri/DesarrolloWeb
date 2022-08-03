@@ -34,10 +34,10 @@
                     -->
                     <!-- th = table head, titulos de la tabla-->
                     <th scope="col" th:text="#{cliente.nombre}"></th>
+                    <th scope="col" th:text="#{cliente.apellido}"></th>
                     <th scope="col" th:text="#{cliente.correo}"></th>
                     <th scope="col" th:text="#{cliente.telefono}"></th>
                     <th scope="col" th:text="#{categoria.descripcion}"></th>
-                    <th scope="col" th:text="#{cliente.usuario}"></th>
                     <th scope="col" th:text="#{accion.editar}"></th>
                     <th scope="col" > </th>
                     <th scope="col" th:text="#{accion.eliminar}"></th>
@@ -50,18 +50,17 @@
             <tbody>
 
 
-
                 <!-- Aqui vamos a usar un th:each, puede verse como un for un while
                 (ciclo), decimos que por cada usuario en personas (variable que 
                 obtenemos del controlador) voy hacer una fila donde la informacion
                 va a ser la siguiente: -->
             <th:block th:each="user : ${helpform}">
                 <tr>
-                    <td th:text="${user.getUsername}"></td>
+                    <td th:text="${user.getFirstname}"></td>
+                    <td th:text="${user.getLastname}"></td>
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getPhone}"></td>
                     <td th:text="${user.getDescrip}"></td>
-                    <td th:text="${user.getUserform.getUsername}"></td>
 
 
 
@@ -73,12 +72,12 @@
                     <td>
                         <!-- Este es el metodo editar persona en cual le 
                         pasabamos un id, etc -->
-                        <a th:href="@{/editHelpform/{id}(id=${user.getId_help})}">Edit</a>
+                        <a th:href="@{/editHelpform/{id}(id=${user.getId_helpform})}">Edit</a>
                     <td>
                     <td>
                         <!-- Este es el metodo delete persona en cual le 
                         pasabamos un id, etc -->
-                        <a th:href="@{/deleteHelpform/{id}(id=${user.getId_help})}">Delete</a>
+                        <a th:href="@{/deleteHelpform/{id}(id=${user.getId_helpform})}">Delete</a>
                     </td> 
                 </tr>
             </th:block>

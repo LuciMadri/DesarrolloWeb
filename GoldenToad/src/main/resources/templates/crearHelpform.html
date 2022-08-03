@@ -25,17 +25,26 @@
                         </div>
 
                         <!---------------------------------------------------------------------------------------------------------------------------- -->
-                        <input type="hidden" th:field="*{id_help}">
+                        <input type="hidden" th:field="*{id_helpform}">
+                        
                         <div class="form-group mb-3 row">
-                            <label class="col-md-2 col-form-label" for="username">Username</label>
+                            <label class="col-md-2 col-form-label" for="firstname">Firstname</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{username}" placeholder= "Username" id="username" aria-describedby="emailHelp">
+                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{firstname}" placeholder= "Firstname" id="firstname" aria-describedby="emailHelp">
                             </div>
                         </div>
 
                         <!---------------------------------------------------------------------------------------------------------------------------- -->
                         <div class="form-group mb-3 row">
-                            <label class="form-control-sm col-md-2 col-form-label" for="email">Email</label>
+                            <label class="form-control-sm col-md-2 col-form-label" for="lastname">Lastname</label>
+                            <div class="col-sm-10">
+                                <input type="text" th:field="*{lastname}" class="form-control form-control-sm col-md-6" placeholder= "Lastname" id="lastname" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+
+                        <!---------------------------------------------------------------------------------------------------------------------------- -->
+                        <div class="form-group mb-3 row">
+                            <label class="form-control-sm col-form-label col-md-2" for="email">Email</label>
                             <div class="col-sm-10">
                                 <input type="text" th:field="*{email}" class="form-control form-control-sm col-md-6" placeholder= "Email" id="email" aria-describedby="emailHelp">
                             </div>
@@ -45,30 +54,18 @@
                         <div class="form-group mb-3 row">
                             <label class="form-control-sm col-form-label col-md-2" for="phone">Phone</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{phone}" class="form-control form-control-sm col-md-6" placeholder= "phone" id="phone" aria-describedby="emailHelp">
+                                <input type="text" th:field="*{phone}" class="form-control form-control-sm col-md-6" placeholder= "Phone" id="phone" aria-describedby="emailHelp">
                             </div>
                         </div>
-
+                        
                         <!---------------------------------------------------------------------------------------------------------------------------- -->
                         <div class="form-group mb-3 row">
                             <label class="form-control-sm col-form-label col-md-2" for="descrip">Description</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{descrip}" class="form-control form-control-sm col-md-6" placeholder= "Descrip" id="descrip" aria-describedby="emailHelp">
+                                <input type="text" th:field="*{descrip}" class="form-control form-control-sm col-md-6" placeholder= "Description" id="descrip" aria-describedby="emailHelp">
                             </div>
                         </div>
 
-
-                        <!---------------------------------------------------------------------------------------------------------------------------- -->
-                        <div class="form-group mb-3 row">
-                            <label class="form-control-sm col-form-label col-md-2" for="username">Users</label>
-                            <div class="col-sm-10">
-                                <select th:field="*{Userform}" class="form-control form-control-sm col-md-6" id="userform" aria-describedby="emailHelp">
-                                    <option th:each="x:${users}"
-                                            th:value="${x.id_user}"
-                                            th:text="${x.username}"/>
-                                </select>
-                            </div>
-                        </div>
 
                         <!--------------------------------------------------------------------------- -->
                         <div class="d-grid gap-2 col-6 mx-auto">
