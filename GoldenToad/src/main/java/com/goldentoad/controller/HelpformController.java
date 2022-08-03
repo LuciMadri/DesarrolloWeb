@@ -2,12 +2,11 @@ package com.goldentoad.controller;
 
 import com.goldentoad.Service.IProjectService;
 import com.goldentoad.entity.Helpform;
-import com.goldentoad.entity.News;
+
 import com.goldentoad.entity.Project;
-import com.goldentoad.entity.Userform;
+
 import com.goldentoad.service.IHelpformService;
-import com.goldentoad.service.INewsService;
-import com.goldentoad.service.IUserformService;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,12 +26,6 @@ public class HelpformController {
     private IHelpformService helpformService;
 
     @Autowired
-    private IUserformService userformService;
-
-    @Autowired
-    private INewsService newsService;
-
-    @Autowired
     private IProjectService projectService;
 
     //==========================================================================
@@ -49,29 +42,29 @@ public class HelpformController {
         return "helpform";
     }
 
-    @GetMapping("/helpformN")
-    public String createHelpform(Model model) {
-        List<Userform> listUsers = userformService.listUser();
+    @GetMapping("/help2")
+    public String createHelp(Model model) {
         model.addAttribute("helpform", new Helpform());
-        model.addAttribute("users", listUsers);
-        return "crearHelpform";
+        return "help2";
     }
-
-    @PostMapping("/saveHelpform")
-    public String saveHelpform(@ModelAttribute Helpform helpform) {
+    
+    @PostMapping("/saveHelp")
+    public String saveHelp(@ModelAttribute Helpform helpform) {
         //Con esto lo guardo en la bd
         helpformService.saveHelpform(helpform);
 
         //Aqui quiero que me redirija a otro get mapping
-        return "redirect:/helpform";
+        return "redirect:/help2";
     }
+
+    //-------------------------------------------------------------------------
+    
+    
 
     @GetMapping("/editHelpform/{id_help}")
     public String editHelpform(@PathVariable("id_help") Long idHelp, Model model) {
         Helpform helpform = helpformService.getHelpformById(idHelp);
-        List<Userform> listUser = userformService.listUser();
         model.addAttribute("helpform", helpform);
-        model.addAttribute("users", listUser);
         return "crearHelpform";
 
     }
@@ -81,7 +74,6 @@ public class HelpformController {
         helpformService.deleteById(idhelp);
         return "redirect:/helpform";
     }
-
 
     //==========================================================================
     //--------------------------- Projects -------------------------------------
@@ -131,45 +123,41 @@ public class HelpformController {
 
         return "home";
     }
-    
-     @GetMapping("/about")
+
+    @GetMapping("/about")
     public String about() {
 
         return "about";
     }
-    
-     @GetMapping("/help")
+
+    /*@GetMapping("/help")
     public String help() {
 
         return "help";
-    }
-    
-     @GetMapping("/index")
+    }*/
+
+    @GetMapping("/index")
     public String index() {
 
         return "index";
     }
-    
-     @GetMapping("/login")
+
+    @GetMapping("/login")
     public String login() {
 
         return "login";
     }
-    
-    
-     @GetMapping("/portafolio")
+
+    @GetMapping("/portafolio")
     public String portafolio() {
 
         return "portafolio";
     }
-    
-    
-     @GetMapping("/contact")
+
+    @GetMapping("/contact")
     public String contact() {
 
         return "contact";
     }
-    
-
 
 }

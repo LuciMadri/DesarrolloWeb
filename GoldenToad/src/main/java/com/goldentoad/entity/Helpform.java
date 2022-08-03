@@ -20,37 +20,42 @@ public class Helpform implements Serializable {
     //Creamos los atributos que asemejen la tabla (persona).
     //Definimos la llame primaria con @id
     @Id
-
     //Con esta valor decimos que nuestra id va a obtener un valor autoincremental.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_help;
-    private String username;
+    private long id_helpform;
+    
+    
+    private String firstname;
+    private String lastname;
     private String email;
     private String phone;
     private String descrip;
 
-    //Definomos la relacion  de una a muchas
-    @ManyToOne
-
-    //Foreign key
-    @JoinColumn(name = "id_user")
-    private Userform userform;
 
     //Creamos getters y setters
-    public long getId_help() {
-        return id_help;
+
+    public long getId_helpform() {
+        return id_helpform;
     }
 
-    public void setId_help(long id_help) {
-        this.id_help = id_help;
+    public void setId_helpform(long id_helpform) {
+        this.id_helpform = id_helpform;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {
@@ -75,14 +80,6 @@ public class Helpform implements Serializable {
 
     public void setDescrip(String descrip) {
         this.descrip = descrip;
-    }
-
-    public Userform getUserform() {
-        return userform;
-    }
-
-    public void setUserform(Userform userform) {
-        this.userform = userform;
     }
 
 }
