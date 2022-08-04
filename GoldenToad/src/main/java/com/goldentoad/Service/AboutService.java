@@ -28,13 +28,13 @@ public class AboutService implements IAboutService{
     }
 
     @Override
-    public void delete(int id_about) {
+    public void deleteAbout(int id_about) {
         aboutRepository.deleteById(id_about);
     }
 
-    @Override
-    public About findByFirstname(String firstname) {
-        return aboutRepository.findByFirstname(firstname);
-    }
+    /*@Override
+    public About findByFirstname(String firstname_a) {
+        return aboutRepository.findByFirstname(firstname_a);
+    }*/
    
 }

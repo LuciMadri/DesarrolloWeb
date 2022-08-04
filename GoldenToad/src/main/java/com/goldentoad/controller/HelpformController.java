@@ -124,18 +124,6 @@ public class HelpformController {
         return "home";
     }
 
-    @GetMapping("/about")
-    public String about() {
-
-        return "about";
-    }
-
-    /*@GetMapping("/help")
-    public String help() {
-
-        return "help";
-    }*/
-
     @GetMapping("/index")
     public String index() {
 

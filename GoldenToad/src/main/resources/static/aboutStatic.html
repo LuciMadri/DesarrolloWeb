@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org"> 
     <head>
         <title>Golden Toad</title>
-        <link rel="stylesheet" href="css/help.css"> <!-- LLamado de la hoja de diseno CSS-->
+        <link rel="stylesheet" href="css/about.css"> <!-- LLamado de la hoja de diseno CSS-->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,42 +16,64 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
     </head>
-    
+
     <body>
-         <div class="nav-bar">
+
+        <div class="nav-bar">
 
             <div class="logo">
                 <img src="images/logo.png" alt="banner"/>
             </div>
-
             <nav>
                 <ul>
-                    <li class="home" th:text="#{help.titulo7}"><a href="home.html">Home</a></li>
-                    <li th:text="#{help.titulo1}"><a href="portafolio.html">Portafolio</a></li>
-                    <li th:text="#{help.titulo2}"><a href="news">News</a></li>
-                    <li th:text="#{help.titulo3}"><a href="login.html">Login</a></li>
-                    <li th:text="#{help.titulo4}"><a href="contact.html">Contact</a></li>
-                    <li th:text="#{help.titulo5}"><a href="aboutStatic.html">About</a></li>
-                    <li th:text="#{help.titulo6}"><a href="help.html">Help</a></li>
+                    <li class="home" th:text="#{about.titulo}"><a href="home.html">Home</a></li>
+                    <li th:text="#{about.titulo1}"><a href="portafolio.html">Portafolio</a></li>
+                    <li th:text="#{about.titulo2}"><a href="newsStatic.html">News</a></li>
+                    <li th:text="#{about.titulo3}"><a href="login.html">Login</a></li>
+                    <li th:text="#{about.titulo4}"><a href="contact.html">Contact</a></li>
+                    <li th:text="#{about.titulo5}"><a href="aboutStatic.html">About</a></li>
+                    <li th:text="#{about.titulo6}"><a href="help.html">Help</a></li>
                 </ul>
 
-                <div class="nombre">
+                <div class =" nombre">
                     <h1>Golden Toad</h1>
                 </div>
             </nav>
         </div>
-        
-        <section class="form-help">
-            <h4 th:text="#help.titulo8)">Help Form</h4>
-            <input class="controls" type="text" name="nombres " id="nombres" placeholder="Enter your name">
-            <input class="controls" type="text" name="apellidos " id="apellidos" placeholder="Enter your lastname">
-            <input class="controls" type="email" name="correo " id="correo" placeholder="Enter your email">
-            <input class="controls" type="tel" name="numero " id="numero" placeholder="Enter your phone number">
-            <input  class="controls" type="text" name="detalle " id="detalle" placeholder="How can I help you?">
-            <p>I agree with <a href='#'>Terms and Conditions </a></p>
-            <input class="botons" type= "submit" value="Send">
+
+        <div class='content'>
+            <div class="us">
+                
+                
+                <h1 th:text="#{about.titulo}">Who are we?</h1>
+                <td th:text="${getDescrip}"></td> 
+                
+               <!-- <p>We are a small company in Costa Rica. We believe that no matter where you come from,
+                    you can fulfill your dreams and be part of something big.</p> -->
+            </div>
+
+            <div class="history">
+                <h2 th:text="#{about.titulo8}">Where it all started?</h2>
+                <p th:text="#{about.texto}">
+                    Isaac the founder of Golden Toad, had a dream to start his own company, 
+                    so he started designing his first official video game "Broken Dreams",
+                    he traveled to Miami to a conference in which he presented his game and the rest is history.
+                </p>
+            </div>
             
-        </section>
+            <div class="services">
+                <h2 th:text="#{about.titulo9}">What do we have to offer?</h2>
+                <p  th:text="#{about.texto1}">
+                    Our services are totally aimed at video game development, 
+                    with the Unreal Engine 5 tool, in which we have many
+                </p>
+            </div>
+
+
+
+
+        </div>
+        
         
           <footer th:fragment="footer">
             <div class="container">
@@ -69,6 +90,6 @@
                 </footer>
             </div>
         </footer>
-        
+
     </body>
 </html>

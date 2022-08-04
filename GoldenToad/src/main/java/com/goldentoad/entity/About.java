@@ -14,8 +14,8 @@ public class About {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id_about;
-    private String firstname;
-    private String lastname;
+    private String firstname_a;
+    private String lastname_a;
     private String descrip;
 
     public int getId_about() {
@@ -26,20 +26,20 @@ public class About {
         this.id_about = id_about;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstname_a() {
+        return firstname_a;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstname_a(String firstname_a) {
+        this.firstname_a = firstname_a;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastname_a() {
+        return lastname_a;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastname_a(String lastname_a) {
+        this.lastname_a = lastname_a;
     }
 
     public String getDescrip() {
@@ -49,6 +49,8 @@ public class About {
     public void setDescrip(String descrip) {
         this.descrip = descrip;
     }
+
+    
     
     
     

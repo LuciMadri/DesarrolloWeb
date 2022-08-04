@@ -27,13 +27,22 @@
 
             <nav>
                 <ul>
-                    <li class="home" th:text="#{help.titulo7}"><a href="home.html">Home</a></li>
-                    <li th:text="#{help.titulo1}"><a href="portafolio.html">Portafolio</a></li>
-                    <li th:text="#{help.titulo2}"><a href="news">News</a></li>
-                    <li th:text="#{help.titulo3}"><a href="login.html">Login</a></li>
-                    <li th:text="#{help.titulo4}"><a href="contact.html">Contact</a></li>
-                    <li th:text="#{help.titulo5}"><a href="about.html">About</a></li>
-                    <li th:text="#{help.titulo6}"><a href="help2">Help</a></li>
+                    <li class="nav-item">
+                        <!--                          <a th:href="@{~/profile/index}">Home</a></li>-->
+
+                    <li> <a th:text="#{home.titulo7}" th:href="home"></a></li>
+                    <li> <a th:text="#{home.titulo1}" th:href="portafolio"></a></li>
+                    <!--                    <li th:text="#{home.titulo1}"><a href="portafolio.html">Portafolio</a></li>-->
+                    <!--                    <li th:text="#{home.titulo2}"><a href="news.html">News</a></li>-->
+                    <li> <a th:text="#{home.titulo2}" th:href="news"></a></li>
+                    <!--                    <li th:text="#{home.titulo3}"><a href="login.html">Login</a></li>-->
+                    <li> <a th:text="#{home.titulo3}" th:href="login.html"></a></li>
+                    <!--                    <li th:text="#{home.titulo4}"><a href="contact.html">Contact</a></li>-->
+                    <li> <a th:text="#{home.titulo4}" th:href="contact"></a></li>
+                    <!--                    <li th:text="#{home.titulo5}"><a href="about.html">About</a></li>-->
+                    <li> <a th:text="#{home.titulo5}" th:href="about.html"></a></li>
+                    <!--                    <li th:text="#{home.titulo6}"><a href="help.html">Help</a></li>-->
+                    <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
                 </ul>
 
                 <div class="nombre">

@@ -9,6 +9,6 @@ public interface IAboutService {
     public List<About>listAbout();
     public About getAboutById (int id_about);
     public void saveAbout(About about);
-    public void delete(int id_about);
-    public About findByFirstname(String firstname);
+    public void deleteAbout(int id_about);
+    //public About findByFirstname(String firstname_a);
 }

@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AboutRepository extends CrudRepository<About,Integer> {
-    About findByFirstname(String firstname);
+    //About findByFirstname(String firstname_a);
 }
