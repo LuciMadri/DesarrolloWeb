@@ -55,8 +55,13 @@ a {
     box-sizing: border-box;
 }
 
-ul li{
-    font-weight: 600;
+idioma{
+    font-weight: 400;
+    font-size: 20px;
+    display: inline-block;
+    position:relative;
+    top:0em;
+    left:0%;
 }
 
 nav ul li {
@@ -71,9 +76,8 @@ nav ul li {
     box-sizing: border-box;
     right: 50%;
     top: 20px;
-    width: 50px;
-    height: 50px;
-
+    width: 60px;
+    height: 60px;
 }
 
 .logo img{
@@ -94,8 +98,8 @@ nav ul li {
     font-family: "Montserrat", sans-serif;
     font-size: 40px;
     color: white;
-/*    left: 20%;*/
-    top: 40px;
+    /*left: 20%;*/
+    top: 10em;;
 }
 
 .imgLogo{
@@ -119,7 +123,7 @@ nav ul li {
     position: relative;
     width: 50%;
     height: 50%;
-    top: 2in;
+    /*top: 2in;*/
     left: 15%;
     
 }
@@ -137,13 +141,14 @@ nav ul li {
     width: 50%;
     height: 50%;
     left: 40%;
-    bottom: 8em;
+    top:5em;
+    /*bottom: 8em;*/
 }
 
 .history p{
     display: inline-block;
     position: relative;
-    left: 100px;
+    left: 20px;
     top:30px;
 }
 
@@ -153,13 +158,13 @@ nav ul li {
     width: 50%;
     height: 50%;
     left: 15%;
-    bottom: 19em;
+    top: 9em;
 }
 
 .services p{
     display: inline-block;
     position: relative;
-    left: 100px;
+    left: 50px;
     top:30px;
 }
 
