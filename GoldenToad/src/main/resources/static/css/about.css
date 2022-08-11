@@ -168,6 +168,12 @@ nav ul li {
     top:30px;
 }
 
+.footer{
+    display: inline-block;
+    position: relative;
+    top: 20em;
+}
+
 
 
 

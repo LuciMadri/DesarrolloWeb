@@ -1,117 +1,62 @@
 
 <html xmlns:th="http://www.thymeleaf.org"> 
     <head>
-        <title th:text="#{portafolio.titulo}">Golden Toad</title>
+    <head th:replace="plantilla/templateFront::head"></head>
+    <link rel="stylesheet" href="css/portafolio.css">
+</head>
 
+<body>
+    <header th:replace="plantilla/templateFront::header"></header>
+    <div class="body-portfolio">
 
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <!-- BOOSTRAP-->   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
-        <link rel="stylesheet" href="css/portafolio.css"> <!-- LLamado de la hoja de diseno CSS-->
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-
-
-    </head>
-
-    <body>
-
-        <div class="nav-bar">
-
-            <div class="logo">
-                <img src="images/logo.png" alt="banner"/>
-            </div>
-
-
-            <nav>
-                <ul>
-                    <li> <a th:text="#{home.titulo7}" th:href="home"></a></li>
-                    <li> <a th:text="#{home.titulo1}" th:href="portafolio"></a></li>
-                    <!--                    <li th:text="#{home.titulo1}"><a href="portafolio.html">Portafolio</a></li>-->
-                    <!--                    <li th:text="#{home.titulo2}"><a href="news.html">News</a></li>-->
-                    <li> <a th:text="#{home.titulo2}" th:href="news"></a></li>
-                    <!--                    <li th:text="#{home.titulo3}"><a href="login.html">Login</a></li>-->
-                    <li> <a th:text="#{home.titulo3}" th:href="login.html"></a></li>
-                    <!--                    <li th:text="#{home.titulo4}"><a href="contact.html">Contact</a></li>-->
-                    <li> <a th:text="#{home.titulo4}" th:href="contact"></a></li>
-                    <!--                    <li th:text="#{home.titulo5}"><a href="about.html">About</a></li>-->
-                    <li> <a th:text="#{home.titulo5}" th:href="about.html"></a></li>
-                    <!--                    <li th:text="#{home.titulo6}"><a href="help.html">Help</a></li>-->
-                    <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
-                </ul>
-
-                <div class="nombre">
-                    <h1>Golden Toad</h1>
+        <div class="container">
+            <div class="card">
+                <figure>
+                    <img src="images/imgEscaleras.png"> 
+                </figure>
+                <div class="contenido">
+                    <h3>Broken Dreams</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    </p>
+                    <a href="#">Leer mas</a>
                 </div>
-            </nav>
-
-
+            </div>
+            
+            <div class="card">
+                <figure>
+                    <img src="images/clowns.jpg"> 
+                </figure>
+                <div class="contenido">
+                    <h3>Dead Clowns</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    </p>
+                    <a href="#">Leer mas</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <figure>
+                    <img src="images/rocketleague.jpg"> 
+                </figure>
+                <div class="contenido">
+                    <h3>Rocket League</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    </p>
+                    <a href="#">Leer mas</a>
+                </div>
+            </div>
         </div>
 
-        <div class="juego"> 
-            <div>
-                <h1>Broken Dreams</h1>
-            </div>
-
-
-
-            <div>
-                <p th:text="#{portafolio.texto}">
-                    An adventure/horror game inspired in little nightmares and silent hill. 
-                    Game in development, early access. English/Spanish supported, more languages soon.
-                </p>
-            </div>
-
-            <div class="information">
-
-
-
-                <!--                <h4 th:text="#{portafolio.texto2}">Status: In development</h4>
-                                <h4 th:text="#{portafolio.texto3}">Plataforms: Windows</h4>
-                                <h4 th:text="#{portafolio.texto4}">Author: Isaac Chaves</h4>
-                                <h4 th:text="#{portafolio.texto5}">Genre: Adventure, Puzzle</h4>
-                                <h4 th:text="#{portafolio.texto6}">Made with: Unreal Engine</h4>
-                                <h4 th:text="#{portafolio.texto7}">Tags: Horror, Psychological Horror, Short, Singleplayer</h4>
-                                <h4 th:text="#{portafolio.texto8}">Average session: A few minutes</h4>
-                                <h4 th:text="#{portafolio.texto9}">Language: English, Spanish, Latin America</h4>
-                                <h4 th:text="#{portafolio.texto10}">Inputs: Keyboard, Mouse, Xbox controller</h4>-->
-
-
-            </div>
-
-        </div>
-
-        <div class="video">
-            <figure>
-
-                <video width="700" height="440" controls>
-                    <source src="videos/trailer2.mp4" type="video/mp4">
-                </video>
-
-
-            </figure>
-            <br></br> 
-
-
-            <div class="tarjetas">
+        <!-- <div class="tarjetas">
                 <div class="row">
-
-
+    
+    
                     <div class="col-sm-6">
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
                             <img src="images/desarrollo.jpeg" class="card-img-top" alt="desarrollo">
@@ -121,17 +66,17 @@
                             </div>
                         </div>
                     </div>
-
-
+    
+    
                     <br></br>
-
+    
                     <div class="col-sm-6">
                         <div class="card border-secondary mb-3" style="max-width: 18rem;">
                             <img src="images/windows.jpeg" class="card-img-top" alt="windows">
                             <div class="card-body">
                                 <h5 class="card-title">Plataforms:</h5>
                                 <p class="card-text">Windows.</p>
-
+    
                             </div>
                         </div>
                     </div>
@@ -142,7 +87,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Author:</h5>
                                 <p class="card-text">Isaac Chaves.</p>
-
+    
                             </div>
                         </div>
                     </div>
@@ -153,13 +98,13 @@
                             <div class="card-body">
                                 <h5 class="card-title">Genre:</h5>
                                 <p class="card-text">Adventure, Puzzle.</p>
-
+    
                             </div>
                         </div>
                     </div>
-
+    
                     <br></br>
-
+    
                     <div class="col-sm-6">
                         <div class="card border-danger mb-3" style="max-width: 18rem;">
                             <img src="images/unrealengine.jpeg" class="card-img-top" alt="unrealengine">
@@ -169,7 +114,7 @@
                             </div>
                         </div>
                     </div> 
-
+    
                     <br></br>
                     <div class="col-sm-6">
                         <div class="card border-warning mb-3" style="max-width: 18rem;">
@@ -177,7 +122,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tags:</h5>
                                 <p class="card-text">Horror, Psychological Horror, Short, Singleplayer.</p>
-
+    
                             </div>
                         </div>
                     </div>  
@@ -188,11 +133,11 @@
                             <div class="card-body">
                                 <h5 class="card-title">Average session:</h5>
                                 <p class="card-text">A few minutes.</p>
-
+    
                             </div>
                         </div>
                     </div>  
-
+    
                     <br></br>
                     <div class="col-sm-6">
                         <div class="card border-warning mb-3" style="max-width: 18rem;">
@@ -200,7 +145,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Language</h5>
                                 <p class="card-text">English, Spanish, Latin America.</p>
-
+    
                             </div>
                         </div>
                     </div>   
@@ -211,44 +156,25 @@
                             <div class="card-body">
                                 <h5 class="card-title">Inputs:</h5>
                                 <p class="card-text">Keyboard, Mouse, Xbox controller.</p>
-
+    
                             </div>
                         </div>
                     </div>
-
+    
                 </div>
+    
+    
+            </div> -->
 
+        
 
-            </div>
+        
+    </div>
+    <footer th:replace="plantilla/templateFront::footer"></footer>
 
+</body>
 
-
-
-                   
-
-            <footer th:fragment="footer">
-                
-               
-                <div class="container">
-                   
-                    <footer class="py-3 my-4">
-
-                        
-                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                                th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
-                                                class="nav-link px-2 text-muted">ES</a></li>
-                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                                th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
-                                                class="nav-link px-2 text-muted">EN</a></li>
-
-
-                    </footer>
-                </div>
-            </footer>
-
-        </body>
-
-        </html>  
+</html>  
 
 
 
@@ -260,11 +186,11 @@
 
 
 
-                 
 
 
 
-            
+
+
 
 
 

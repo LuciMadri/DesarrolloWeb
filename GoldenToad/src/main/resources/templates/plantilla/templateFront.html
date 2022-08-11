@@ -1,0 +1,77 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Donde yo vaya a utilizar la palabra head en otros htmls
+        Va a ser sustituido por todo el codigo que este en la etiqueta
+        Head-->    
+    <head th:fragment="head">
+        <title>Mi tienda</title>
+        <link rel="stylesheet" href="css/templateFront.css">
+
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- Header -->   
+        <header th:fragment="header"> 
+
+            <div class="hero">
+                <nav>
+                    <h2 class="logo">Golden<span>Toad</span> </h2>
+                    <ul>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="portafolio">Portafolio</a></li>
+                        <li><a href="news">News</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="help">Help</a></li>
+                    </ul>
+                    <button type="button">Login</button>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- Footer -->   
+        <footer th:fragment="footer">
+            <section class="footer">
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>                   
+                </div>
+
+                <ul class="list">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    
+                </ul>
+                
+                <p class="copyright">
+                    Copyright @ 2021-2022 Golden Toad, Inc. - All Rights Reserved
+                </p>
+
+            </section>
+        </footer>
+
+
+    </body>
