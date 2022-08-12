@@ -1,86 +1,60 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"> 
     <head>
-        <title>Golden Toad</title>
-        <link rel="stylesheet" href="css/about.css"> <!-- LLamado de la hoja de diseno CSS-->
+    <head th:replace="plantilla/templateFront::head"></head>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <header th:replace="plantilla/templateFront::header"></header>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    </head>
-
-    <body>
-
-        <div class="nav-bar">
-            <div class="logo">
-                <img src="images/logo.png" alt="banner"/>
-            </div>
-
-            <nav>
-                <ul>
-                    <li> <a th:text="#{home.titulo7}" th:href="home"></a></li>
-                    <li> <a th:text="#{home.titulo1}" th:href="portafolio"></a></li>
-                    <li> <a th:text="#{home.titulo2}" th:href="news"></a></li>
-                    <li> <a th:text="#{home.titulo3}" th:href="login"></a></li>
-                    <li> <a th:text="#{home.titulo4}" th:href="contact"></a></li>
-                    <li> <a th:text="#{home.titulo5}" th:href="about"></a></li>
-                    <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
-                </ul>
-
-                <div class="nombre">
-                    <h1>Golden Toad</h1>
+    <div class="content">
+        <div class="cuadro">
+            <h1 class="tittle">Who are we?</h1>
+            <div class="info">
+                <p class="text">We are a small company in Costa Rica. We believe that no matter where you come from,
+                    you can fulfill your dreams and be part of something big.</p>
+                <div class="boton">
+                    <button type="button" class="boton">Learn more</button>
                 </div>
-            </nav>
+            </div>
         </div>
+    </div>
 
-        <div class="content">
-            <div class="us">
-                 <h1 th:text="#{about.titulo7}"></h1> 
-                
-                 <p>We are a small company in Costa Rica. We believe that no matter where you come from,
-                    you can fulfill your dreams and be part of something big.</p> 
-            </div>
+    <div class="container">
 
-            <div class="history">
-                <h2 th:text="#{about.titulo8}"></h2>
-                <p th:text="#{about.texto}">
-                    Isaac the founder of Golden Toad, had a dream to start his own company, 
-                    so he started designing his first official video game "Broken Dreams",
-                    he traveled to Miami to a conference in which he presented his game and the rest is history.
-                </p>
-            </div>
-            
-            <div class="services">
-                <h2 th:text="#{about.titulo9}">What do we have to offer?</h2>
-                <p  th:text="#{about.texto1}">
-                    Our services are totally aimed at video game development, 
-                    with the Unreal Engine 5 tool, in which we have many
-                </p>
-            </div>
-            
-            <footer class="py-3 my-4">
-                    <ul class="idioma">
-                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                                th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
-                                                class="nav-link px-2 text-muted">ES</a></li>
-                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                                th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
-                                                class="nav-link px-2 text-muted">EN</a></li>
-                    </ul>
-            </footer>
-            
+        <div class="card-body-about">
+            <img src="images/isaac.jpg" class="img-about" alt=""> 
+            <h5 class="fn">Isaac</h5>
+            <h5 class="ln">Chaves</h5>
+            <p class="descrip">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn-about">Contact</a>
         </div>
-  
-    </body>
+        
+        <div class="card-body-about">
+            <img src="images/isaac.jpg" class="img-about" alt=""> 
+            <h5 class="fn">Oscar</h5>
+            <h5 class="ln">Sanchez</h5>
+            <p class="descrip">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn-about">Contact</a>
+        </div>
+        
+        <div class="card-body-about">
+            <img src="images/isaac.jpg" class="img-about" alt=""> 
+            <h5 class="fn">Angie</h5>
+            <h5 class="ln">Rodriguez</h5>
+            <p class="descrip">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn-about">Contact</a>
+        </div>
+        
+        <div class="card-body-about">
+            <img src="images/isaac.jpg" class="img-about" alt=""> 
+            <h5 class="fn">Angie</h5>
+            <h5 class="ln">Rodriguez</h5>
+            <p class="descrip">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn-about">Contact</a>
+        </div>
+    </div>
+
+    <footer th:replace="plantilla/templateFront::footer"></footer>
+</body>
 </html>

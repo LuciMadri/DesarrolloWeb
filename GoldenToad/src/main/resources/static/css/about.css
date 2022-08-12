@@ -1,19 +1,8 @@
-/* 
-    Created on : 2 jun. 2022, 16:28:11
-    Author     : Oscar Sanchez Boza (Hades)
-    Author     : Luciana Madrigal Ocampo
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Open+Sans&display=swap'); /******SANS 1******/
-@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Blaka+Hollow&family=Open+Sans&display=swap');/*****BLAKA 2*****/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");/*****Monserrat*****/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');/*****Roboto*****/
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
-
-
+@import "node_modules/bootstrap/scss/bootstrap";
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 
 body
@@ -26,156 +15,84 @@ body
     background-size: cover;
 }
 
-a {
-  outline: none;
-  text-decoration: none;
-  display: inline-block;
-  width: 3%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: white;
-}
-
-
-.nav-bar h1{
-    font-family: 'Roboto Mono', monospace;
-}
-
-.nav-bar{
-    font-family: "Montserrat", sans-serif;
-    padding: 20px 20px 20px 20px;
-    position: relative;
-    color: white;
-    font-size: 20px;
-    width: 100%;
-    display: inline-block;
-    align-items: center;
-    left: 50%;
-    box-sizing: border-box;
-}
-
-idioma{
-    font-weight: 400;
-    font-size: 20px;
-    display: inline-block;
-    position:relative;
-    top:0em;
-    left:0%;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0px 20px;
-}
-
-.logo{
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    right: 50%;
-    top: 20px;
-    width: 60px;
-    height: 60px;
-}
-
-.logo img{
-    max-height: 80px;
-    max-width: 80px;
-}
-
-.nombre{
-    display: inline-block;
-    position: relative;
-    right: 44%;
-    bottom: 33px;
-}
-
 .content{
-    position: relative;
-    display: inline-block;
-    font-family: "Montserrat", sans-serif;
-    font-size: 40px;
+    background-color: #242424;
     color: white;
-    /*left: 20%;*/
-    top: 10em;;
+    padding: 50px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.content h1{
+    font-size: 50px;
 }
 
-.imgLogo{
-   position: relative;
-    display: inline-block;
-    width: 300px;
-    height: 300px;
-}
-
-.imgLogo img{
-   position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    left: 120px;
-    top: 40px;
-}
-
-.us{
-    display: inline-block;
+.content p{
+    max-width: 30em;
     position: relative;
-    width: 50%;
-    height: 50%;
-    /*top: 2in;*/
-    left: 15%;
-    
+    left: 30%;
+    padding: 20px;
+    font-size: 25px;
 }
 
-.us p{
+
+
+
+
+
+.container{
+    width: 100%;
+}
+
+.card-body-about{
     display: inline-block;
+    width: 20em;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #242424;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.20);
+    cursor: default;
+    transition: all 400ms ease;
+    color: white;
+    padding: 30px;
+    align-items: center;
+    left: 10%;
     position: relative;
-    left: 100px;
-    top:30px;
 }
 
-.history{
+
+.card-body-about .fn{
     display: inline-block;
-    position: relative;
-    width: 50%;
-    height: 50%;
-    left: 40%;
-    top:5em;
-    /*bottom: 8em;*/
 }
 
-.history p{
+.card-body-about .ln{
     display: inline-block;
-    position: relative;
-    left: 20px;
-    top:30px;
 }
 
-.services{
+.card-about:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    background: #383838;
+}
+
+.btn-about{
+    text-decoration: none;
     display: inline-block;
-    position: relative;
-    width: 50%;
-    height: 50%;
-    left: 15%;
-    top: 9em;
+    padding: 10px;
+    margin-top: 10px;
+    color: #ea1538;
+    border: 1px solid #ea1538;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.btn-about:hover{
+    color: white;
+    background-color: #ea1538;
+    transition: all 400ms ease;
 }
 
-.services p{
-    display: inline-block;
-    position: relative;
-    left: 50px;
-    top:30px;
+.img-about {
+    border-radius: 50%;
+    width: 100%;
+    height: 230px;
+    padding: 20px;
 }
-
-.footer{
-    display: inline-block;
-    position: relative;
-    top: 20em;
-}
-
-
-
-
-
-

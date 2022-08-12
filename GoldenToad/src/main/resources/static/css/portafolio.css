@@ -25,16 +25,11 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-/*
+
 .body-portfolio{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     font-family: sans-serif;
         
-}*/
+}
 
 .container{
     width: 100%;
