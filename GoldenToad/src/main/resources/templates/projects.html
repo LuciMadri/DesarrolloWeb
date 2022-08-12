@@ -9,13 +9,13 @@
                <tr>
                    <th scope="col" th:text="#{cliente.titulo}"> </th>
                    <th scope="col" th:text="#{categoria.descripcion}"> </th>
-                   <th scope="col" th:text="#{articulo.newsid}"></th>
+                   <th scope="col" th:text="#{articulo.projectsid}"></th>
                    <th scope="col" th:text="#{accion.editar}"></th>
                    <th scope="col" th:text="#{accion.eliminar}"></th>
                </tr>
            </thead>
            <tbody>
-               <th:block th:each="user : ${project}">
+               <th:block th:each="user : ${projects}">
                   <td th:text="${user.getTitle}"></td>
                   <td th:text="${user.getDescrip}"></td>
                   <td th:text="${user.getId_projects}"></td>

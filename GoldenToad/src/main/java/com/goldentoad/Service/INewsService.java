@@ -12,3 +12,10 @@ public interface INewsService {
     public void delete(int id_news);
     public News findByTitle(String title);
 }
+
+
+
+
+
+
+    

@@ -7,11 +7,11 @@
         <title>Golden Toad</title>
         <link rel="stylesheet" href="css/templateFront.css">
 
-        
+
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-        
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </head>
@@ -24,14 +24,14 @@
                 <nav>
                     <h2 class="logo">Golden<span>Toad</span> </h2>
                     <ul>
-                        <li><a href="home">Home</a></li>
-                        <li><a href="portafolio">Portafolio</a></li>
-                        <li><a href="news">News</a></li>
-                        <li><a href="contact">Contact</a></li>
-                        <li><a href="about">About</a></li>
-                        <li><a href="help">Help</a></li>
+                        <li> <a th:text="#{home.titulo7}" th:href="home"></a></li>
+                        <li> <a th:text="#{home.titulo1}" th:href="portafolio"></a></li>
+                        <li> <a th:text="#{home.titulo2}" th:href="news"></a></li>
+                        <li> <a th:text="#{home.titulo4}" th:href="contact"></a></li>
+                        <li> <a th:text="#{home.titulo5}" th:href="about"></a></li>
+                        <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
                     </ul>
-                    <button type="button">Login</button>
+                    <li> <a th:text="#{home.titulo3}" th:href="login.html"></a></li>
                 </nav>
             </div>
 
@@ -63,15 +63,28 @@
                     <li>
                         <a href="#">Privacy Policy</a>
                     </li>
-                    
+
+                    <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                            th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
+                                            class="nav-link px-0 text-muted">ES</a></li>
+                    <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                            th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
+                                            class="nav-link px-0 text-muted">EN</a></li>
+
                 </ul>
-                
+
                 <p class="copyright">
                     Copyright @ 2021-2022 Golden Toad, Inc. - All Rights Reserved
                 </p>
+
+
+                </div>
 
             </section>
         </footer>
 
 
     </body>
+
+
+

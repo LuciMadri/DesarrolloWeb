@@ -1,9 +1,8 @@
 package com.goldentoad.controller;
 
-import com.goldentoad.Service.IProjectService;
 import com.goldentoad.entity.Helpform;
 
-import com.goldentoad.entity.Project;
+import com.goldentoad.entity.Projects;
 
 import com.goldentoad.service.IHelpformService;
 
@@ -15,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import com.goldentoad.Service.IProjectsService;
+import com.goldentoad.entity.Projects;
 
 //Definimos de que tipo de objeto va a ser nuestra clase
 @Controller
@@ -25,8 +26,8 @@ public class HelpformController {
     //El controller utiliza el servicio, en este caso personaService
     private IHelpformService helpformService;
 
-    @Autowired
-    private IProjectService projectService;
+//    @Autowired
+//    private IProjectsService projectService;
 
     //==========================================================================
     //--------------------------- Helpform -------------------------------------
@@ -78,45 +79,45 @@ public class HelpformController {
     //==========================================================================
     //--------------------------- Projects -------------------------------------
     //==========================================================================
-    @GetMapping("/projects")
-    public String project(Model model) {
-        List<Project> listProject = projectService.getAllProject();
-        model.addAttribute("titulo", "Projects Table");
-        model.addAttribute("project", listProject);
+//    @GetMapping("/projects")
+//    public String projects(Model model) {
+//        List<Projects> listProject = projectService.getAllProjects();
+//        model.addAttribute("titulo", "Projects Table");
+//        model.addAttribute("project", listProject);
+//
+//        //Aqui retornamos un html que se llama personas.
+//        return "projects";
+//    }
+//
+//    //Crear una persona nueva CRUD
+//    @GetMapping("/projectN")
+//    public String crearProjects(Model model) {
+//        model.addAttribute("projects", new Projects());
+//        return "crearProjects";
+//    }
 
-        //Aqui retornamos un html que se llama personas.
-        return "projects";
-    }
-
-    //Crear una persona nueva CRUD
-    @GetMapping("/projectN")
-    public String crearProject(Model model) {
-        model.addAttribute("projects", new Project());
-        return "crearProjects";
-    }
-
-    @PostMapping("/saveProject")
-    public String saveProject(@ModelAttribute Project project) {
-        //Con esto lo guardo en la bd
-        projectService.saveProject(project);
-
-        //Aqui quiero que me redirija a otro get mapping
-        return "redirect:/projects";
-    }
-
-    // Aqui en editar solo se esta usando project
-    @GetMapping("/editProject/{id_projects}")
-    public String editProject(@PathVariable("id_projects") Integer idProject, Model model) {
-        Project project = projectService.getProjectById(idProject);
-        model.addAttribute("projects", project);
-        return "crearProjects";
-    }
-
-    @GetMapping("/deleteProject/{id_projects}")
-    public String eliminarProject(@PathVariable("id_projects") Integer idProject) {
-        projectService.delete(idProject);
-        return "redirect:/projects";
-    }
+//    @PostMapping("/saveProject")
+//    public String saveProjects(@ModelAttribute Projects project) {
+//        //Con esto lo guardo en la bd
+//        projectsService.saveProjects(projects);
+//
+//        //Aqui quiero que me redirija a otro get mapping
+//        return "redirect:/projects";
+//    }
+//
+//    // Aqui en editar solo se esta usando project
+//    @GetMapping("/editProject/{id_projects}")
+//    public String editProject(@PathVariable("id_projects") Integer idProject, Model model) {
+//        Projects projects = projectsService.getProjectsById(idProjects);
+//        model.addAttribute("projects", projects);
+//        return "crearProjects";
+//    }
+//
+//    @GetMapping("/deleteProjects/{id_projects}")
+//    public String eliminarProjects(@PathVariable("id_projects") Integer idProjects) {
+//        projectsService.delete(idProjects);
+//        return "redirect:/projects";
+//    }
 
     @GetMapping("/home")
     public String home() {
