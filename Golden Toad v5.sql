@@ -80,7 +80,6 @@ INSERT INTO about (firstname_a,lastname_a,descrip)
 VALUES('Isaac','Chaves', 'Creator'),
 	('Olivia','Rodriguez', 'Helper'),
     ('Pedro','Sanchez', 'Designer');
-
     
 INSERT INTO projects (title,descrip,specs, link)
 VALUES('Golden Toad','Horror game', 'Windows, Adventure, puzzel, unreal engine', 'https://as01.epimg.net/meristation/imagenes/2021/08/11/videos/1628654867_088540_1628654909_noticia_normal.jpg'),
@@ -92,5 +91,8 @@ VALUES('Resident Evil','Nuevo proyecto en desarrollo','https://as01.epimg.net/me
 	('Silent Hill','Remake Silent Hill 1','https://as01.epimg.net/meristation/imagenes/2021/08/11/videos/1628654867_088540_1628654909_noticia_normal.jpg'),
 	('Elden Ring 2','Pre produccion','https://as01.epimg.net/meristation/imagenes/2021/08/11/videos/1628654867_088540_1628654909_noticia_normal.jpg'); 
     
-    
-    Select * from person ;
+    INSERT INTO person (firstname,lastname,birth,email,username,password,roles,active,permissions)
+VALUES('Luciana','Madrigal','2003-09-12','madrigal.luciana@gmail.com','lmadri','$2a$12$eE6li6LnuX/WOZa1tuStBOdqIvzjCbQyf/lwP8JIX.YTlE/0V9cga','ADMIN', 1, 'ADMIN'),
+	('David','Cardenas','2003-07-07','david.cardenas@gmail.com','dcardenas','$2a$12$eE6li6LnuX/WOZa1tuStBOdqIvzjCbQyf/lwP8JIX.YTlE/0V9cga','USER', 1, 'USER'),
+	('Sebastian','Carballo','2000-11-09','sebs.carballo@gmail.com','sbsCarba','$2a$12$eE6li6LnuX/WOZa1tuStBOdqIvzjCbQyf/lwP8JIX.YTlE/0V9cga','ADMIN', 1, 'ADMIN'),
+	('Oscar','sanchez','1990-02-01','sanchez.oscar@gmail.com','hades','$2a$12$eE6li6LnuX/WOZa1tuStBOdqIvzjCbQyf/lwP8JIX.YTlE/0V9cga','USER', 1, 'USER');

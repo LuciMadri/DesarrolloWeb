@@ -2,99 +2,39 @@
 
 <html xmlns:th="http://www.thymeleaf.org"> 
     <head>
-        <title>Golden Toad</title>
-        <link rel="stylesheet" href="css/help.css"> <!-- LLamado de la hoja de diseno CSS-->
+        <link rel="stylesheet" href="css/help.css">
+    <head th:replace="plantilla/templateFront::head"></head>
+</head>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<body>
+    <header th:replace="plantilla/templateFront::header"></header>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-    </head>
-
-    <body>
-        <div class="nav-bar">
-
-            <div class="logo">
-                <img src="images/logo.png" alt="banner"/>
-            </div>
-
-            <nav>
-                <ul>
-                    <li class="nav-item">
-                        <!--                          <a th:href="@{~/profile/index}">Home</a></li>-->
-
-                    <li> <a th:text="#{home.titulo7}" th:href="home"></a></li>
-                    <li> <a th:text="#{home.titulo1}" th:href="portafolio"></a></li>
-                    <!--                    <li th:text="#{home.titulo1}"><a href="portafolio.html">Portafolio</a></li>-->
-                    <!--                    <li th:text="#{home.titulo2}"><a href="news.html">News</a></li>-->
-                    <li> <a th:text="#{home.titulo2}" th:href="news"></a></li>
-                    <!--                    <li th:text="#{home.titulo3}"><a href="login.html">Login</a></li>-->
-                    <li> <a th:text="#{home.titulo3}" th:href="login.html"></a></li>
-                    <!--                    <li th:text="#{home.titulo4}"><a href="contact.html">Contact</a></li>-->
-                    <li> <a th:text="#{home.titulo4}" th:href="contact"></a></li>
-                    <!--                    <li th:text="#{home.titulo5}"><a href="about.html">About</a></li>-->
-                    <li> <a th:text="#{home.titulo5}" th:href="about.html"></a></li>
-                    <!--                    <li th:text="#{home.titulo6}"><a href="help.html">Help</a></li>-->
-                    <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
-                </ul>
-
-                <div class="nombre">
-                    <h1>Golden Toad</h1>
-                </div>
-            </nav>
-        </div>
-        
+    <div class="form">
         <form th:object = "${helpform}"
               th:action="@{/saveHelp}"
               method="POST">
 
             <input type="hidden" th:field="*{id_helpform}">
-            
+
             <section class="form-help">
-                
+
                 <!-- <h4 th:text="#help.titulo8">Help Form</h4> -->
-                
+
                 <input class="controls" type="text" name="nombres "  th:field="*{firstname}" id="nombres" placeholder="Enter your firstname">
                 <input class="controls" type="text" name="apellidos " th:field="*{lastname}" id="apellidos" placeholder="Enter your lastname">
                 <input class="controls" type="email" name="correo " th:field="*{email}" id="correo" placeholder="Enter your email">
                 <input class="controls" type="tel" name="numero " th:field="*{phone}" id="numero" placeholder="Enter your phone number">
                 <input  class="controls" type="text" name="detalle " th:field="*{descrip}" id="detalle" placeholder="How can I help you?">
                 <p>I agree with <a href='#'>Terms and Conditions </a></p>
-                
+
                 <button class="botons" value="Guardar" type="submit">Submit</button>
             </section>
 
         </form>
 
-
-
-
-
-
-        
-
-        <footer th:fragment="footer">
-            <div class="container">
-                <footer class="py-3 my-4">
-
-                    <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                            th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
-                                            class="nav-link px-2 text-muted">ES</a></li>
-                    <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                            th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
-                                            class="nav-link px-2 text-muted">EN</a></li>
-
-
-                </footer>
-            </div>
-        </footer>
-
-    </body>
+    </div>
+    
+    <footer th:replace="plantilla/templateFront::footer"></footer>
+    
+</body>
 </html>

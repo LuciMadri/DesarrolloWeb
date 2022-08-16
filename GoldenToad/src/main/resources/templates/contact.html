@@ -3,110 +3,43 @@
 
 <html xmlns:th="http://www.thymeleaf.org"> 
     <head>
-        <title>Golden Toad</title>
-        <link rel="stylesheet" href="css/contact.css"> <!-- LLamado de la hoja de diseno CSS-->
+    <head th:replace="plantilla/templateFront::head"></head>
+    <link rel="stylesheet" href="css/contact.css"> <!-- LLamado de la hoja de diseno CSS-->
+</head>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<body>
+    <header th:replace="plantilla/templateFront::header"></header>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-        
-       
-      
-        
-    </head>
-
-    <body>
-        <div class="nav-bar">
-
-            <div class="logo">
-                <img src="images/logo.png" alt="banner"/>
-            </div>   
-
-            <nav>
-                
-                <ul>
-                     <li> <a th:text="#{home.titulo7}" th:href="home"></a></li>
-                    <li> <a th:text="#{home.titulo1}" th:href="portafolio"></a></li>
-                    <!--                    <li th:text="#{home.titulo1}"><a href="portafolio.html">Portafolio</a></li>-->
-                    <!--                    <li th:text="#{home.titulo2}"><a href="news.html">News</a></li>-->
-                    <li> <a th:text="#{home.titulo2}" th:href="news.html"></a></li>
-                    <!--                    <li th:text="#{home.titulo3}"><a href="login.html">Login</a></li>-->
-                    <li> <a th:text="#{home.titulo3}" th:href="login.html"></a></li>
-                    <!--                    <li th:text="#{home.titulo4}"><a href="contact.html">Contact</a></li>-->
-                    <li> <a th:text="#{home.titulo4}" th:href="contact"></a></li>
-                    <!--                    <li th:text="#{home.titulo5}"><a href="about.html">About</a></li>-->
-                    <li> <a th:text="#{home.titulo5}" th:href="about.html"></a></li>
-                    <!--                    <li th:text="#{home.titulo6}"><a href="help.html">Help</a></li>-->
-                    <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
-                </ul>
-
-                <div class =" nombre">
-                    <h1>Golden Toad</h1>
-                </div>
-            </nav>    
-        </div>
-
-        <div class ="content">
-            <h1 th:text="#{contact.titulo}">Contact us</h1>
-            <p th:text="#{contact.texto}">Help us grow as a company and follow us on our social networks to get more information about our products and let's talk!</p>
-           
-            
-            <a href="https://www.facebook.com/Golden-Toad-Productions-108691398454996" target="_blank">
-                <img src="images/facebook.png" class="logo1" alt="Facebook Logo">
-            </a>
-            <a href="https://www.instagram.com/goldentoadproductions/" target="_blank">
-                <img src="images/instagram.png" class="logo2" alt="Instagram Logo" >
-            </a>
-            <a href="https://twitter.com/GoldenToadProd" target="_blank">
-                <img src="images/twitter.png" class="logo3" alt="Twitter Logo">
-            </a>
-            <a href="mailto:isaac@goldentoadproductions.com" target="_blank">
-                <img src="images/email.png" class="logo4" alt="Email Logo">
-            </a>
-        </div>
-
-        <div class="video">
-            <figure>
-                <video width="700" height="440" controls>
-                    <source src="videos/trailer2.mp4" type="video/mp4">
-                </video>
-            </figure>
-
-       
-
-        </div>
-        
-        
-        
-            <footer th:fragment="footer">
-                
-               
-                <div class="container">
-                   
-                    <footer class="py-3 my-4">
-
-                        
-                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                                th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
-                                                class="nav-link px-2 text-muted">ES</a></li>
-                        <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                                th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
-                                                class="nav-link px-2 text-muted">EN</a></li>
+    <div class ="content">
+        <h1 th:text="#{contact.titulo}">Contact us</h1>
+        <p th:text="#{contact.texto}">Help us grow as a company and follow us on our social networks to get more information about our products and let's talk!</p>
 
 
-                    </footer>
-                </div>
-            </footer>
-            </div>
-        </footer>
+        <a href="https://www.facebook.com/Golden-Toad-Productions-108691398454996" target="_blank">
+            <img src="images/facebook.png" class="logo1" alt="Facebook Logo">
+        </a>
+        <a href="https://www.instagram.com/goldentoadproductions/" target="_blank">
+            <img src="images/instagram.png" class="logo2" alt="Instagram Logo" >
+        </a>
+        <a href="https://twitter.com/GoldenToadProd" target="_blank">
+            <img src="images/twitter.png" class="logo3" alt="Twitter Logo">
+        </a>
+        <a href="mailto:isaac@goldentoadproductions.com" target="_blank">
+            <img src="images/email.png" class="logo4" alt="Email Logo">
+        </a>
+    </div>
 
-    </body>
+    <div class="video">
+        <figure>
+            <video width="700" height="440" controls>
+                <source src="videos/trailer2.mp4" type="video/mp4">
+            </video>
+        </figure>
+
+
+
+    </div>
+
+    <footer th:replace="plantilla/templateFront::footer"></footer>
+</body>
 </html>

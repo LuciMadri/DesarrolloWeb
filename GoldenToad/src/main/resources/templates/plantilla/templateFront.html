@@ -31,7 +31,7 @@
                         <li> <a th:text="#{home.titulo5}" th:href="about"></a></li>
                         <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
                     </ul>
-                    <li> <a th:text="#{home.titulo3}" th:href="login.html"></a></li>
+                    <button th:text="#{home.titulo3}"type="button">Login</button>
                 </nav>
             </div>
 
@@ -64,12 +64,16 @@
                         <a href="#">Privacy Policy</a>
                     </li>
 
-                    <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                    <li>
+                        <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                                             th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
-                                            class="nav-link px-0 text-muted">ES</a></li>
-                    <li class="nav-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                            class="nav-link px-0 text-muted">Spanish</a>
+                    </li>
+                    <li>
+                        <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                                             th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
-                                            class="nav-link px-0 text-muted">EN</a></li>
+                                            class="nav-link px-0 text-muted">English</a>
+                    </li>
 
                 </ul>
 
