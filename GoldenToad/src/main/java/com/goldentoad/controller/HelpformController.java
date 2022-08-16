@@ -130,12 +130,12 @@ public class HelpformController {
 
         return "index";
     }
-
-    @GetMapping("/login")
-    public String login() {
-
-        return "login";
-    }
+//
+//    @GetMapping("/login")
+//    public String login() {
+//
+//        return "login";
+//    }
 
     @GetMapping("/portafolio")
     public String portafolio() {
