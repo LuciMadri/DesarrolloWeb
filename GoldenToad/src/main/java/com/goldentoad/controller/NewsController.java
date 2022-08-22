@@ -53,4 +53,10 @@ public class NewsController {
         newsService.delete(idNews);
         return "redirect:/newsN";
     }
+    
+    @GetMapping("/news")
+    public String login() {
+
+        return "news";
+    }
 }
