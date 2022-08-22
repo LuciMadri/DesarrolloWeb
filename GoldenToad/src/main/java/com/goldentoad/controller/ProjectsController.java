@@ -53,7 +53,7 @@ public class ProjectsController {
     @GetMapping("/delete/{id_projects}")
     public String eliminarProjects(@PathVariable("id_projects") Integer idProjects) {
         projectsService.delete(idProjects);
-        return "redirect:/projectsN";
+        return "redirect:/projects";
     }
     
      @GetMapping("/projects")

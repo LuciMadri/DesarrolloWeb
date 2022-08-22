@@ -35,7 +35,7 @@ public class NewsController {
         return "crearNews";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/guardarNews")
     public String guardarNews(@ModelAttribute News news) {
         newsService.saveNews(news);
         return "redirect:/newsN";
@@ -48,24 +48,9 @@ public class NewsController {
         return "crearNews";
     }
 
-    @GetMapping("/delete/{id_news}")
+    @GetMapping("/eliminarNews/{id_news}")
     public String eliminarNews(@PathVariable("id_news") Integer idNews) {
         newsService.delete(idNews);
         return "redirect:/newsN";
     }
-    
-     @GetMapping("/news")
-    public String news(Model model) {
-        List<News> listNews = newsService.getAllNews();
-        model.addAttribute("news", listNews);
-        return "news";
-    }
-    
-     @GetMapping("/news2")
-    public String news2(Model model) {
-        List<News> listNews = newsService.getAllNews();
-        model.addAttribute("news", listNews);
-        return "news2";
-    }
-    
 }

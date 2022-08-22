@@ -4,13 +4,25 @@
     padding:0;
     box-sizing: border-box;
 }
+.container{
+    padding: 20px;
+}
+label{
+    color: white;
+}
+.tabla{
+    padding: 50px;
+}
+
+.tabla h1{
+    color: white;
+}
 
 body
 {
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/BrokenDreamsLandscape.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    height: 1800px;
     background-attachment: fixed;
     background-size: cover;
 }
