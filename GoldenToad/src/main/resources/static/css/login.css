@@ -1,11 +1,4 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 3 jun. 2022, 20:03:41
-    Author     : Sebas Carballo
-*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Blaka&family=Open+Sans&display=swap'); /******SANS 1******/
 @import url('https://fonts.googleapis.com/css2?family=Blaka&family=Blaka+Hollow&family=Open+Sans&display=swap');/*****BLAKA 2*****/
@@ -18,7 +11,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     padding:0;
     box-sizing: border-box;
 }
-
+.card{
+    position: relative;
+    top: 18em;
+}
 body{
     background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../images/bloodborneBack.jpeg);
     background-repeat: no-repeat;

@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.tabla{
+    position: relative;
+    padding: 20px;
+}
+
+h1{
+    color: white;
+}
+
+body
+{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/BrokenDreamsLandscape.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.content{
+    background-color: #242424;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.content h1{
+    font-size: 50px;
+}
+
+.content p{
+    max-width: 30em;
+    position: relative;
+    left: 30%;
+    padding: 20px;
+    font-size: 25px;
+}
+
+
+.container{
+    width: 100%;
+}
+
+.card-body-about{
+    display: inline-block;
+    width: 20em;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #242424;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.20);
+    cursor: default;
+    transition: all 400ms ease;
+    color: white;
+    padding: 30px;
+    align-items: center;
+    left: 10%;
+    position: relative;
+}
+
+
+.card-body-about .fn{
+    display: inline-block;
+}
+
+.card-body-about .ln{
+    display: inline-block;
+}
+
+.card-about:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    background: #383838;
+}
+
+.btn-about{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #ea1538;
+    border: 1px solid #ea1538;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.btn-about:hover{
+    color: white;
+    background-color: #ea1538;
+    transition: all 400ms ease;
+}
+
+.img-about {
+    width: 100%;
+    height: 230px;
+    padding: 10px;
+    border-radius: 10px;
+}

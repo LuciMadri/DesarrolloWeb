@@ -11,6 +11,7 @@
                     <th scope="col" th:text="#{articulo.descripcion}"></th>
                     <th scope="col" th:text="#{articulo.fechasalida}"></th>
                     <th scope="col" th:text="#{articulo.newsid}"></th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -27,7 +28,7 @@
                         <a th:href="@{/editNews/{id}(id=${user.getId_news})}">Edit</a>
                     <td>
                     <td>
-                        <a th:href="@{/delete/{id}(id=${user.getId_news})}">Delete</a>
+                        <a th:href="@{/eliminarNews/{id}(id=${user.getId_news})}">Delete</a>
                     </td> 
                 </tr>
             </th:block>

@@ -21,90 +21,27 @@ body
     background-size: cover;
 }
 
-.content p{
-    font-weight: 200;
-    font-size: 20px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-}
-
-.nav-bar h1{
-    font-family: 'Roboto Mono', monospace;
-}
-
-.nav-bar{
-    font-family: "Montserrat", sans-serif;
-    padding: 20px 20px 20px 20px;
-    position: fixed;
-    color: white;
-    font-size: 20px;
-    width: 100%;
-    display: inline-block;
-    align-items: center;
-    left: 50%;
-    box-sizing: border-box;
-}
-
-ul li{
-    font-weight: 600;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0px 20px;
-}
-
-.logo{
-    display: inline-block;
+.recentarticles{
     position: relative;
-    box-sizing: border-box;
-    right: 50%;
-    top: 20px;
-    width: 50px;
-    height: 50px;
+    display: block;
 }
 
-.logo img{
-    max-height: 80px;
-    max-width: 80px;
-}
-
-.nombre{
-    display: inline-block;
+.recentarticles{
     position: relative;
-    right: 44%;
-    bottom: 33px;
-}
-
-.divider{
-    background-color: #525254;
-    background-image: linear-gradient(160deg, #525254 10%, #ffffff 51%);
-    display: inline-block;
-    position: relative;
-    height: 2000px;
-    width: 40%;
-    right: 54%;
-    bottom: 133px;
-    z-index: -1;
-}
-
-.unreal{
-    display: inline-block;
-    position: relative;
-    top: 17%;
-    left: 10%
-}
-.unreal img{
-    display: inline-block;
-    position: relative;
-    width: 300px;
-    height: 300px;
+    display: block;
+    background-color: white;
+    width:50%;
+    /*    height: 50em;*/
 
 }
+
+.noticias{
+    position: relative;
+    left: 10%;
+    bottom: 6em;
+}
+
+
 
 .content{
     position: relative;
@@ -132,7 +69,6 @@ nav ul li {
     background-size: cover;
     position: relative;
     display: block;
-    top: 10em;
     width: 100%;
     height: 40%;
     color: white;
@@ -195,15 +131,7 @@ input{
     cursor: pointer;
 }
 
-.recentarticles{
-    position: relative;
-    display: block;
-    background-color: white;
-    width:50%;
-    height: 100em;
-    top: 10em;
 
-}
 
 .separador{
     top:10em;
@@ -216,7 +144,8 @@ input{
     font-family: 'Roboto', sans-serif;
     top: 1em;
     font-weight: bold;
-    left: 9em;
+    left: 20%;
+    font-size: 30px;
 
 }
 
@@ -359,5 +288,7 @@ input{
     left: 13em;
     bottom: 7em;
 }
+
+
 
 

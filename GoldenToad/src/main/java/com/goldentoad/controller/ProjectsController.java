@@ -20,27 +20,25 @@ public class ProjectsController {
 
     @Autowired
     private IProjectsService projectsService;
-    
 
-    @GetMapping("/projectsN")
+    @GetMapping("/projects")
     public String projectsN(Model model) {
         List<Projects> listProjects = projectsService.getAllProjects();
         model.addAttribute("titulo", "Projects");
         model.addAttribute("projects", listProjects);
-        return "projectsN";
+        return "projects";
     }
 
-
     @GetMapping("/crearProjects")
-    public String crearProjectss(Model model) {
+    public String crearProjects(Model model) {
         model.addAttribute("projects", new Projects());
         return "crearProjects";
     }
 
     @PostMapping("/saveProjects")
-    public String guardarProjects(@ModelAttribute Projects projects) {
+    public String saveProjects(@ModelAttribute Projects projects) {
         projectsService.saveProjects(projects);
-        return "redirect:/projectsN";
+        return "redirect:/projects";
     }
 
     @GetMapping("/editProjects/{id_projects}")
@@ -50,19 +48,10 @@ public class ProjectsController {
         return "crearProjects";
     }
 
-    @GetMapping("/delete/{id_projects}")
+    @GetMapping("/deleteProjects/{id_projects}")
     public String eliminarProjects(@PathVariable("id_projects") Integer idProjects) {
         projectsService.delete(idProjects);
-        return "redirect:/projectsN";
+        return "redirect:/projects";
     }
-    
-     @GetMapping("/projects")
-    public String projects(Model model) {
-        List<Projects> listProjects = projectsService.getAllProjects();
-        model.addAttribute("projects", listProjects);
-        return "projects";
-    }
-    
-   
-    
+
 }

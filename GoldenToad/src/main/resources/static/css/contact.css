@@ -18,51 +18,10 @@ body{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/residentbackground.jpeg);
     background-repeat: no-repeat;
     background-position: center center;
-    height: 1800px;
     background-attachment: fixed;
     background-size: cover;
 }
-a{
-    text-decoration: none;
-    color: white;
-}
 
-.nav-bar h1{
-    font-family: 'Roboto Mono', monospace;
-}
-
-.nav-bar{
-    font-family: "Montserrat", sans-serif;
-    padding: 20px 20px 20px 20px;
-    position: relative;
-    color: white;
-    font-size: 20px;
-    width: 100%;
-    display: inline-block;
-    align-items: center;
-    left: 50%;
-    box-sizing: border-box;
-}
-
-
-
-ul li{
-    font-weight: 600;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-    list-style: none;
-    margin: 0px 20px;
-    bottom: 25px;
-}
-
-.logo{
-    position: relative;
-    display: inline-block;
-
-}
 
 .content{
     position: relative;
@@ -87,16 +46,7 @@ nav ul li {
     bottom: 5in;
 }
 
-.logo{
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    right: 50%;
-    top: 20px;
-    width: 50px;
-    height: 50px;
 
-}
 
 .logo img{
     max-height: 80px;
@@ -162,10 +112,9 @@ nav ul li {
     /*    left: 30px; */
 }
 
-video {
+.video {
     left: 53%;
     bottom: 500px;
-    display: inline-block;
     position: relative;
 }
 

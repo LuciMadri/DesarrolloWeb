@@ -4,83 +4,90 @@
         en plantilla que es nuestro folder, /template, donde template 
         es nuestro archivo html, y en template lo que yo haya llamado head
         es lo que va a ir ahi dentro-->
-    <head th:replace="plantilla/template::head"></head>
+    <head th:replace="plantilla/templateFront::head"></head>
+    <link rel="stylesheet" href="css/help.css"> 
     <body>
         <!-- Lo que este aqui dentro se va a sustituir por lo que este en
             header de template, y lo que hay en este header es el nav bar-->
-        <header th:replace="plantilla/template::header"></header>
+        <header th:replace="plantilla/templateFront::header"></header>
+
+        <div class="tabla">
+            <!-- Esta etiqueta h1 sirve para ponerle un titulo a nuestra tabla
+         
+             En el text le estamos poniendo nuestra "Variable" que se va a 
+             llamar titulo, entonces en el controlador nosotros le devolvemos al
+             front end, un titulo que es ese mismo.En nuestro caso 
+             "Tabla personas"-->
+            <h1 th:text="${titulo}"></h1>
 
 
 
-        <!-- Esta etiqueta h1 sirve para ponerle un titulo a nuestra tabla
+            <table class="table table-dark table-striped">
+                <thead class="thead-dark">
+
+
+
+                    <!-- tr = table row, o sea una fila -->
+                    <tr>
+                        <!-- Todas estas son las columnas que tenemos en nuestra
+                        clase persona, ademas de que le agregamos, editar y eliminar
+                        -->
+                        <!-- th = table head, titulos de la tabla-->
+                        <th scope="col" th:text="#{cliente.nombre}"></th>
+                        <th scope="col" th:text="#{cliente.apellidos}"></th>
+                        <th scope="col" th:text="#{cliente.correo}"></th>
+                        <th scope="col" th:text="#{cliente.telefono}"></th>
+                        <th scope="col" th:text="#{categoria.descripcion}"></th>
+                        <th scope="col" th:text="#{accion.editar}"></th>
+                        <th scope="col" > </th>
+                        <th scope="col" > </th>
+                    </tr>
+                </thead>
+
+
+
+                <!-- Aqui comienza el cuerpo de nuestra tabla -->
+                <tbody>
+
+
+                    <!-- Aqui vamos a usar un th:each, puede verse como un for un while
+                    (ciclo), decimos que por cada usuario en personas (variable que 
+                    obtenemos del controlador) voy hacer una fila donde la informacion
+                    va a ser la siguiente: -->
+                <th:block th:each="user : ${helpform}">
+                    <tr>
+                        <td th:text="${user.getFirstname}"></td>
+                        <td th:text="${user.getLastname}"></td>
+                        <td th:text="${user.getEmail}"></td>
+                        <td th:text="${user.getPhone}"></td>
+                        <td th:text="${user.getDescrip}"></td>
+
+
+
+                        <!-- Aqui agregamos un hipervinculo donde le pasamos el 
+                        url que queremos llamar para ejecutar algun metodo
+                        
+                        Basicamente aqui mapeamos el url con el que vamos a hacer
+                        ciertas funciones en nuestro controllador-->
+
+                        <td>
+                            <!-- Este es el metodo delete persona en cual le 
+                            pasabamos un id, etc -->
+                            <a th:href="@{/deleteHelpform/{id}(id=${user.getId_helpform})}">Delete</a>
+                        </td> 
+                        <td>
+                            <a>    </a>
+                        </td> 
+                    </tr>
+                </th:block>
+                </tbody>
+            </table>
+
+        </div>
+
+
         
-            En el text le estamos poniendo nuestra "Variable" que se va a 
-            llamar titulo, entonces en el controlador nosotros le devolvemos al
-            front end, un titulo que es ese mismo.En nuestro caso 
-            "Tabla personas"-->
-        <h1 th:text="${titulo}"></h1>
-
-
-
-        <table class="table table-dark table-striped">
-            <thead class="thead-dark">
-
-
-
-                <!-- tr = table row, o sea una fila -->
-                <tr>
-                    <!-- Todas estas son las columnas que tenemos en nuestra
-                    clase persona, ademas de que le agregamos, editar y eliminar
-                    -->
-                    <!-- th = table head, titulos de la tabla-->
-                    <th scope="col" th:text="#{cliente.nombre}"></th>
-                    <th scope="col" th:text="#{cliente.apellido}"></th>
-                    <th scope="col" th:text="#{cliente.correo}"></th>
-                    <th scope="col" th:text="#{cliente.telefono}"></th>
-                    <th scope="col" th:text="#{categoria.descripcion}"></th>
-                    <th scope="col" th:text="#{accion.editar}"></th>
-                    <th scope="col" > </th>
-                    <th scope="col" th:text="#{accion.eliminar}"></th>
-                </tr>
-            </thead>
-
-
-
-            <!-- Aqui comienza el cuerpo de nuestra tabla -->
-            <tbody>
-
-
-                <!-- Aqui vamos a usar un th:each, puede verse como un for un while
-                (ciclo), decimos que por cada usuario en personas (variable que 
-                obtenemos del controlador) voy hacer una fila donde la informacion
-                va a ser la siguiente: -->
-            <th:block th:each="user : ${helpform}">
-                <tr>
-                    <td th:text="${user.getFirstname}"></td>
-                    <td th:text="${user.getLastname}"></td>
-                    <td th:text="${user.getEmail}"></td>
-                    <td th:text="${user.getPhone}"></td>
-                    <td th:text="${user.getDescrip}"></td>
-
-
-
-                    <!-- Aqui agregamos un hipervinculo donde le pasamos el 
-                    url que queremos llamar para ejecutar algun metodo
-                    
-                    Basicamente aqui mapeamos el url con el que vamos a hacer
-                    ciertas funciones en nuestro controllador-->
-                    
-                    <td>
-                        <!-- Este es el metodo delete persona en cual le 
-                        pasabamos un id, etc -->
-                        <a th:href="@{/deleteHelpform/{id}(id=${user.getId_helpform})}">Delete</a>
-                    </td> 
-                </tr>
-            </th:block>
-        </tbody>
-    </table>
-
-    <footer th:replace="plantilla/template::footer">
+    <footer th:replace="plantilla/templateFront::footer"></footer>  
 
     </footer>
 </html>
