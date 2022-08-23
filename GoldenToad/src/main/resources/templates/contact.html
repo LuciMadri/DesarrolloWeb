@@ -4,7 +4,7 @@
 <html xmlns:th="http://www.thymeleaf.org"> 
     <head>
     <head th:replace="plantilla/templateFront::head"></head>
-    <link rel="stylesheet" href="css/contact.css"> <!-- LLamado de la hoja de diseno CSS-->
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
@@ -35,9 +35,18 @@
                 <source src="videos/trailer2.mp4" type="video/mp4">
             </video>
         </figure>
+    </div>
+    
+    <div class="container">
 
-
-
+        <div class="card-body-about">
+            <img src="images/isaac.jpg" class="img-about" alt=""> 
+            <h5 class="fn">Isaac</h5>
+            <h5 class="ln">Chaves</h5>
+            <p class="descrip">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn-about">Contact</a>
+        </div>
+        
     </div>
 
     <footer th:replace="plantilla/templateFront::footer"></footer>

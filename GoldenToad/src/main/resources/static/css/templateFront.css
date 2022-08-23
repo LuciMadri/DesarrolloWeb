@@ -33,7 +33,7 @@ nav{
 }
 
 .logoG{
-    color: white;
+    color: #ea1538;
     font-size: 28px;
 }
 
@@ -178,6 +178,10 @@ body{
 }
 
 /*Splash screen*/
+
+.g{
+    color: white;
+}
 .intro{
     position:fixed;
     z-index:1;

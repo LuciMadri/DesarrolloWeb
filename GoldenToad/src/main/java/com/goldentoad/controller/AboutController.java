@@ -32,21 +32,21 @@ public class AboutController {
         return "crearAbout";
     }
     
-    @PostMapping("/saveAbout")
-    public String guardarNews(@ModelAttribute About about) {
+    @PostMapping("/guardarAbout")
+    public String guardarAbout(@ModelAttribute About about) {
         aboutService.saveAbout(about);
         return "redirect:/aboutN";
     }
     
-    @GetMapping("/editAbout/{id_about}")
-    public String editarNews(@PathVariable("id_about") Integer idAbout, Model model) {
+    @GetMapping("/editarAbout/{id_about}")
+    public String editarAbout(@PathVariable("id_about") Integer idAbout, Model model) {
         About about = aboutService.getAboutById(idAbout);
         model.addAttribute("about", about);
         return "crearAbout";
     }
    
-    @GetMapping("/deleteAbout/{id_about}")
-    public String eliminarNews(@PathVariable("id_about") Integer idAbout) {
+    @GetMapping("/eliminarAbout/{id_about}")
+    public String eliminarAbout(@PathVariable("id_about") Integer idAbout) {
         aboutService.deleteAbout(idAbout);
         return "redirect:/aboutN";
     }

@@ -31,10 +31,10 @@
                     <td th:text="${user.getLastname_a}"></td>
                     <td th:text="${user.getDescrip}"></td>
                     <td>
-                        <a th:href="@{/editAbout/{id}(id=${user.getId_about})}">Edit</a>
+                        <a th:href="@{/editarAbout/{id}(id=${user.getId_about})}">Edit</a>
                     </td>
                     <td>
-                        <a th:href="@{/deleteAbout/{id}(id=${user.getId_about})}">Delete</a>
+                        <a th:href="@{/eliminarAbout/{id}(id=${user.getId_about})}">Delete</a>
                     </td> 
                 </tr>
             </th:block>

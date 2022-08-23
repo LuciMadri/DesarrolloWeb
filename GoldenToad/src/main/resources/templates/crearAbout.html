@@ -1,12 +1,14 @@
-
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Golden Toad</title>
         <head th:replace="plantilla/templateFront::head"></head>
-        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/templateFront.css">
+        
     </head>
     <body>
+        
         <header th:replace="plantilla/templateFront::header"></header>
+        
         <div class="container">
 
             <div class="card-header bg-black text-white"> </div>
@@ -15,7 +17,7 @@
                 <!-------------------Esto es un Formulario--------------- -->
                 <div class="container">
                     <form th:object = "${about}"
-                          th:action="@{/saveAbout}"
+                          th:action="@{/guardarAbout}"
                           method="POST">
 
                         <!--------------------------- -->
