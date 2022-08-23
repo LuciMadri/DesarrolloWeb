@@ -5,28 +5,20 @@
         <header th:replace="plantilla/templateFront::header"></header>
 
         <div class="tabla">
-            <h1 th:text="${titulo}"></h1>
             <table class="table table-dark table-striped">
 
                 <tbody>
 
                 <th:block th:each="user : ${merch}">
-
-
-                    <div class="container">
-
-                        <th:block th:each="user : ${merch}"> 
-
+                            
                             <tr>
                             <div class="card-body-about">
                                 <img th:src="${user.getLink}" class="img-about" alt=""> 
                                 <h5 class="title" th:text="${user.getTitle}"></h5>
                                 <p class="descrip" th:text="${user.getDescrip}"></p>
-                                <a href="#" class="btn-about">Buy</a>
+                                <a href="#" class="btn-about" th:text="#{accion.comprar}"></a>
                             </div>  
                             </tr>
-                            
-                        </th:block>
 
                     </div>  
 

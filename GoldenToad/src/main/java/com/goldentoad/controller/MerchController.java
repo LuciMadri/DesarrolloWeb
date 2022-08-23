@@ -20,7 +20,12 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class MerchController {
+    @Autowired
+    private IMerchService merchService;
 
+    @Autowired
+    private IInventoryService inventoryService;
+    
     @GetMapping("/merch")
     public String login(Model model) {
         List<Merch> listaMerch = merchService.getAllMerch();
@@ -29,11 +34,7 @@ public class MerchController {
         return "merch";
     }
     
-    @Autowired
-    private IMerchService merchService;
-
-    @Autowired
-    private IInventoryService inventoryService;
+    
 
     @GetMapping("/merchN")
     public String merchN(Model model) {
