@@ -132,16 +132,7 @@ public class HelpformController {
 //        return "login";
 //    }
 
-    @GetMapping("/portafolio")
-    public String portafolio() {
-
-        return "portafolio";
-    }
-
-    @GetMapping("/contact")
-    public String contact() {
-
-        return "contact";
-    }
+ 
+    
 
 }
