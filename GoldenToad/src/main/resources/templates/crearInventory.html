@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <head th:replace="plantilla/templateFront::head"></head>
+        <link rel="stylesheet" href="css/templateFront.css">
+        
+    </head>
+    <body>
+        
+        <header th:replace="plantilla/templateFront::header"></header>
+        
+        <div class="container">
+
+            <div class="card-header bg-black text-white"> </div>
+            <div class="card-body">
+
+                <!-------------------Esto es un Formulario--------------- -->
+                <div class="container">
+                    <form th:object = "${inventory}"
+                          th:action="@{/guardarInventory}"
+                          method="POST">
+
+                        <!--------------------------- -->
+                        <div class="form-group mb-3 row">
+
+                        </div>
+
+                        <!---------------------------------------------------------------------------------------------------------------------------- -->
+                        <input type="hidden" th:field="*{id_inventory}">
+                        <div class="form-group mb-3 row">
+                            <label class="col-md-2 col-form-label" for="price">Price</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{price}" placeholder= "Price" id="price" aria-describedby="Price">
+                            </div>
+                        </div>
+
+                        <!---------------------------------------------------------------------------------------------------------------------------- -->
+                        <div class="form-group mb-3 row">
+                            <label class="form-control-sm col-md-2 col-form-label" for="size">Size</label>
+                            <div class="col-sm-10">
+                                <input type="text" th:field="*{size}" class="form-control form-control-sm col-md-6" placeholder= "Size" id="size" aria-describedby="Size">
+                            </div>
+                        </div>
+
+                        <!---------------------------------------------------------------------------------------------------------------------------- -->
+                        <div class="form-group mb-3 row">
+                            <label class="form-control-sm col-form-label col-md-2" for="stock">Stock</label>
+                            <div class="col-sm-10">
+                                <input type="text" th:field="*{stock}" class="form-control form-control-sm col-md-6" placeholder= "Stock" id="stock" aria-describedby="Stock">
+                            </div>
+                        </div>
+
+                        <!---------------------------------------------------------------------------------------------------------------------------- -->
+                        <!--------------------------------------------------------------------------- -->
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" value="Guardar" type="submit">Submit</button>
+                        </div>
+                        <!--------------------------------------------------------------------------- -->
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer th:replace="plantilla/templateFront::footer"></footer> 
+    </body>
+</html>
+

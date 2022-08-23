@@ -13,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  *
@@ -21,22 +24,40 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class InventoryController {
 
-    @GetMapping("/inventory")
-    public String login() {
-
-        return "inventory";
-    }
-
     @Autowired
     private IInventoryService inventoryService;
-    
-    @GetMapping("/inventoryN")
-    public String merchN(Model model){
-        List<Inventory> listaInventory = inventoryService.getAllInventory();
-        model.addAttribute("titulo", "Tabla Inventory");
-        model.addAttribute("inventory", listaInventory);
+
+    @GetMapping("/inventory")
+    public String inventoryN(Model model) {
+        List<Inventory> listInventory = inventoryService.listInventory();
+        model.addAttribute("titulo", "Inventory Table");
+        model.addAttribute("inventory", listInventory);
         return "inventoryN";
     }
+
+    @GetMapping("/crearInventory")
+    public String crearInventory(Model model) {
+        model.addAttribute("inventory", new Inventory());
+        return "crearInventory";
+    }
+
+    @PostMapping("/guardarInventory")
+    public String guardarInventory(@ModelAttribute Inventory inventory) {
+        inventoryService.saveInventory(inventory);
+        return "redirect:/inventoryN";
+    }
+
+    @GetMapping("/editarInventory/{id_inventory}")
+    public String editarInventory(@PathVariable("id_inventory") Long idInventory, Model model) {
+        Inventory inventory = inventoryService.getInventoryById(idInventory);
+        model.addAttribute("inventory", inventory);
+        return "crearInventory";
+    }
+
+    @GetMapping("/eliminarInventory/{id_inventory}")
+    public String eliminarInventory(@PathVariable("id_inventory") Long idInventory) {
+        inventoryService.deleteInventory(idInventory);
+        return "redirect:/inventoryN";
+    }
+
 }
-
-

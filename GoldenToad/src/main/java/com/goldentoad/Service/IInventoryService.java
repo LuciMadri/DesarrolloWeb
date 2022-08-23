@@ -14,12 +14,12 @@ import java.util.List;
  */
 public interface IInventoryService {
 
-    public List<Inventory> getAllInventory();
+    public List<Inventory> listInventory();
 
     public Inventory getInventoryById(long id_inventory);
 
     public void saveInventory(Inventory inventory);
 
-  
+    public void deleteInventory(long id_inventory);
 
 }

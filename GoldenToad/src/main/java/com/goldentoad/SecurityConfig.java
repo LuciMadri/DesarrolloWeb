@@ -68,11 +68,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
         
         http.authorizeRequests()
-                .antMatchers("/aboutN", "/crearAbout", "/saveAbout", "/editAbout/{id_about}", "/deleteAbout/{id_about}", 
+                .antMatchers("inventoryN","/crearInventory", "/merchN", "/aboutN", "/crearAbout", "/saveAbout", "/editAbout/{id_about}", "/deleteAbout/{id_about}", 
                         "/newsN", "/crearNews", "/save", "/editNews/{id_news}", "/delete/{id_news}", 
                         "/projectsN", "/crearProjects", "/saveProjects", "/editProjects/{id_projects}", "/delete/{id_projects}")
                 .hasRole("ADMIN")
-                .antMatchers("/about", "/home", "/index", "/login", "/portafolio", "/contact", "/projects", "/news")
+                .antMatchers("/about", "/home", "/index", "/login", "/portafolio", "/contact", "/projects", "/news", "/merch")
                 .hasAnyRole("USER", "ADMIN")
                 .anyRequest().authenticated()
                 .and()
