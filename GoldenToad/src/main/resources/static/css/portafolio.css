@@ -17,6 +17,15 @@
     padding:0;
     box-sizing: border-box;
 }
+
+.title{
+    position: relative;
+    left: 40px;
+    display: block;
+    top: 70px;
+    padding: 70px;
+}
+
 h1{
     color: white;
 }
@@ -35,16 +44,18 @@ body{
 
 .body-portfolio{
     font-family: sans-serif;
-        
+    display: inline-block;  
+    position: relative;
 }
 
 .container{
     width: 100%;
     display: flex;
     max-width: 1100px;
+    display: inline-block; 
+    position: relative;
 }
 .card{
-    width: 100%;
     margin: 20px;
     border-radius: 6px;
     overflow: hidden;
@@ -52,7 +63,8 @@ body{
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
     cursor: default;
     transition: all 400ms ease;
-    
+    display: inline-block;   
+    position: relative;
 }
 
 .card:hover{
@@ -92,6 +104,6 @@ body{
 }
 
 .card .contenido a:hover{
-   background: #ea1538;
-   color: #fff;
+    background: #ea1538;
+    color: #fff;
 }

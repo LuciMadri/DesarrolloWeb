@@ -2,51 +2,54 @@
 <html xmlns:th="http://www.thymeleaf.org"> 
     <head>
     <head th:replace="plantilla/templateFront::head"></head>
-    <link rel="stylesheet" href="css/portafolio.css">
+    <link rel="stylesheet" href="css/merch.css">
 </head>
 
 <body>
     <header th:replace="plantilla/templateFront::header"></header>
 
 
-    <div class="body-portfolio">
+    <div class="titleP" th:text="#{portafolio.title}" >   
+        <h1>
+            Here you will find some our projects!
+        </h1>
+    </div>
 
-        <tbody>
+    <div class="tabla">
+        <table class="table table-dark table-striped">
 
-        <th:block th:each="user : ${projects}">
+            <tbody>
 
+            <th:block th:each="user : ${projects}">
 
-            <div class="container">
-                <div class="card">
-                    <figure>
-                        <img th:src="${user.getLink}" class="img-about" alt="" > 
-                    </figure>
-                    <div class="contenido">
-                        <h3 class="title" th:text="${user.getTitle}"></h3>
-                        <p class="descrip" th:text="${user.getDescrip}"></p>
-                        <p class="descrip" th:text="${user.getSpecs}"></p>
+                <tr>
+                <div class="card-body-about">
+                    <img th:src="${user.getLink}" class="img-about" alt=""> 
+                    <h5 class="title" th:text="${user.getTitle}"></h5>
+                    <p class="descrip" th:text="${user.getDescrip}"></p>
+                    <p class="descrip" th:text="${user.getSpecs}"></p>
+                    <a href="#" class="btn-about" th:text="#{accion.leermas}"></a>
+                </div>  
+                </tr>
 
-                        <a href="#" class="btn-about" th:text="#{accion.leermas}"></a>
-                    </div>
+                </div>  
 
-                </div>
-
-
-            </div>
-
+            </th:block>
+            </tbody>
+        </table>
     </div>
 
 
-    </th:block>
-    </tbody>
-    <footer th:replace="plantilla/templateFront::footer"></footer>
-
-    </body>
-
-    </html> 
 
 
-        
+<footer th:replace="plantilla/templateFront::footer"></footer>
+
+</body>
+
+</html> 
+
+
+
 
 
 
