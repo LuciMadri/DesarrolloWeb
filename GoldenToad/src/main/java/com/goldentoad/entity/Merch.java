@@ -28,6 +28,7 @@ public class Merch implements Serializable {
     
     private String title;
     private String descrip;
+    private String link;
     
     //Definomos la relacion  de una a muchas
     @ManyToOne
@@ -36,8 +37,15 @@ public class Merch implements Serializable {
     @JoinColumn (name="id_inventory")
     
     private Inventory inventory;
-    
 
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+    
     public long getId_merch() {
         return id_merch;
     }

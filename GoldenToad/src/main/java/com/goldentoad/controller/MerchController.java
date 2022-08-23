@@ -18,23 +18,25 @@ import org.springframework.web.bind.annotation.GetMapping;
  *
  * @author madri
  */
-
 @Controller
 public class MerchController {
-    
-    @GetMapping("/merch")
-    public String login() {
 
+    @GetMapping("/merch")
+    public String login(Model model) {
+        List<Merch> listaMerch = merchService.getAllMerch();
+        model.addAttribute("titulo", "Tabla Merch");
+        model.addAttribute("merch", listaMerch);
         return "merch";
     }
+    
     @Autowired
     private IMerchService merchService;
-    
+
     @Autowired
     private IInventoryService inventoryService;
-    
+
     @GetMapping("/merchN")
-    public String merchN(Model model){
+    public String merchN(Model model) {
         List<Merch> listaMerch = merchService.getAllMerch();
         model.addAttribute("titulo", "Tabla Merch");
         model.addAttribute("merch", listaMerch);

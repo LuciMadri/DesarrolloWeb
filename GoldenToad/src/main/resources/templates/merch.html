@@ -1,43 +1,44 @@
 <html>
-    <head>
     <head th:replace="plantilla/templateFront::head"></head>
-    <link rel="stylesheet" href="css/merch.css">
-</head>
-<body>
-    <header th:replace="plantilla/templateFront::header"></header>
-    
-    <div class="container">
+    <link rel="stylesheet" href="css/merch.css"> 
+    <body>
+        <header th:replace="plantilla/templateFront::header"></header>
 
-        <div class="card-body-about">
-            <img src="images/hatW.png" class="img-about" alt=""> 
-            <h5 class="title">White hat</h5>
-            <p class="descrip">Golden Toad white hat.</p>
-            <a href="#" class="btn-about">Buy</a>
+        <div class="tabla">
+            <h1 th:text="${titulo}"></h1>
+            <table class="table table-dark table-striped">
+
+                <tbody>
+
+                <th:block th:each="user : ${merch}">
+
+
+                    <div class="container">
+
+                        <th:block th:each="user : ${merch}"> 
+
+                            <tr>
+                            <div class="card-body-about">
+                                <img th:src="${user.getLink}" class="img-about" alt=""> 
+                                <h5 class="title" th:text="${user.getTitle}"></h5>
+                                <p class="descrip" th:text="${user.getDescrip}"></p>
+                                <a href="#" class="btn-about">Buy</a>
+                            </div>  
+                            </tr>
+                            
+                        </th:block>
+
+                    </div>  
+
+
+
+
+                </th:block>
+                </tbody>
+            </table>
         </div>
-        
-        <div class="card-body-about">
-            <img src="images/hatB.png" class="img-about" alt=""> 
-            <h5 class="title">Black hat</h5>
-            <p class="descrip">Golden Toad Black hat.</p>
-            <a href="#" class="btn-about">Buy</a>
-        </div>
-        
-        <div class="card-body-about">
-            <img src="images/hoodieW.png" class="img-about" alt=""> 
-            <h5 class="title">White hoodie</h5>
-            <p class="descrip">Golden Toad white hoodie.</p>
-            <a href="#" class="btn-about">Buy</a>
-        </div>
-        
-        <div class="card-body-about">
-            <img src="images/t-shirtB.png" class="img-about" alt=""> 
-            <h5 class="title">Black T-shirt</h5>
-            <p class="descrip">Golden Toad Black T-shirt.</p>
-            <a href="#" class="btn-about">Buy</a>
-        </div>
-        
-    </div>
-    
-    <footer th:replace="plantilla/templateFront::footer"></footer>
-</body>
+
+
+        <footer th:replace="plantilla/templateFront::footer"></footer>  
+    </body>
 </html>
