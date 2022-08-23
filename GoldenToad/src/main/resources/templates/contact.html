@@ -36,18 +36,58 @@
             </video>
         </figure>
     </div>
-    
-    <div class="container">
 
-        <div class="card-body-about">
-            <img src="images/isaac.jpg" class="img-about" alt=""> 
-            <h5 class="fn">Isaac</h5>
-            <h5 class="ln">Chaves</h5>
-            <p class="descrip">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn-about">Contact</a>
-        </div>
+    <!--       <div class="container">
+    
+    
         
+                <tr>
+                <div class="card-body-about">
+                    <img src="images/isaac.jpg" class="img-about" alt=""> 
+                    <h5 class="fn">Isaac</h5>
+                    <h5 class="ln">Chaves</h5>
+                    <p class="descrip">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn-about">Contact</a>
+                </div>
+            </tr>
+                
+            </div>-->
+
+
+
+
+    <div class="tabla">
+        <table class="table table-dark table-striped">
+
+            <tbody>
+
+            <th:block th:each="user : ${contact}">
+
+                <tr>
+                <div class="card-body-about">
+                    <img src="images/logo.png" class="img-about" alt=""> 
+                    <!--<img th:src="${user.getLink}" class="img-about" alt="">--> 
+                    <h5 class="title" th:text="${user.getName}"></h5>
+                    <h5 class="title" th:text="${user.getEmail}"></h5>
+                    <h5 class="title" th:text="${user.getPhone}"></h5>
+                    <h5 class="title" th:text="${user.getContext}"></h5>
+
+                    <a href="#" class="btn-about" th:text="#{accion.contactar}"></a>
+                </div>  
+                </tr>
+
+                </div>  
+
+
+
+
+            </th:block>
+            </tbody>
+        </table>
     </div>
+
+
+
 
     <footer th:replace="plantilla/templateFront::footer"></footer>
 </body>

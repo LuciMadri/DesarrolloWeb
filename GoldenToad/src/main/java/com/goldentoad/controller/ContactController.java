@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.goldentoad.controller;
 
 import com.goldentoad.Service.IContactService;
@@ -59,6 +55,14 @@ public class ContactController {
     public String deleteContact(@PathVariable("id_contact") Integer idContact) {
         contactService.delete(idContact);
         return "redirect:/contactN";
+    }
+    
+    @GetMapping("/contact")
+    public String login(Model model) {
+        List<Contact> listaContact = contactService.getAllContact();
+        model.addAttribute("titulo", "Tabla Contact");
+        model.addAttribute("contact", listaContact);
+        return "contact";
     }
 
 }

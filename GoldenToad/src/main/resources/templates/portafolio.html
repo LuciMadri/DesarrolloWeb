@@ -1,66 +1,52 @@
 
 <html xmlns:th="http://www.thymeleaf.org"> 
-<head>
+    <head>
     <head th:replace="plantilla/templateFront::head"></head>
     <link rel="stylesheet" href="css/portafolio.css">
 </head>
 
 <body>
     <header th:replace="plantilla/templateFront::header"></header>
+
+
     <div class="body-portfolio">
 
-        <div class="container">
-            <div class="card">
-                <figure>
-                    <img src="images/imgEscaleras.png"> 
-                </figure>
-                <div class="contenido">
-                    <h3><a th:text="#{portafolio.brokend}" th:href="Ejemplo"></a></h3>
-                    <p>
-                        <a th:text="#{portafolio.texto}" th:href="Ejemplo"></a>
+        <tbody>
 
-                    </p>
-                    <a href="#">Leer mas</a>
+        <th:block th:each="user : ${projects}">
+
+
+            <div class="container">
+                <div class="card">
+                    <figure>
+                        <img th:src="${user.getLink}" class="img-about" alt="" > 
+                    </figure>
+                    <div class="contenido">
+                        <h3 class="title" th:text="${user.getTitle}"></h3>
+                        <p class="descrip" th:text="${user.getDescrip}"></p>
+                        <p class="descrip" th:text="${user.getSpecs}"></p>
+
+                        <a href="#" class="btn-about" th:text="#{accion.leermas}"></a>
+                    </div>
+
                 </div>
+
+
             </div>
-
-
-
-            <div class="card">
-                <figure>
-                    <img src="images/clowns.jpg"> 
-                </figure>
-                <div class="contenido">
-                    <h3>Dead Clowns</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                    </p>
-                    <a href="#">Leer mas</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <figure>
-                    <img src="images/rocketleague.jpg"> 
-                </figure>
-                <div class="contenido">
-                    <h3>Rocket League</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                    </p>
-                    <a href="#">Leer mas</a>
-                </div>
-            </div>
-        </div>
 
     </div>
+
+
+    </th:block>
+    </tbody>
     <footer th:replace="plantilla/templateFront::footer"></footer>
 
-</body>
+    </body>
 
-</html>  
+    </html> 
+
+
+        
 
 
 

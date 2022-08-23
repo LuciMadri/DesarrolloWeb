@@ -179,7 +179,10 @@ body{
     position: relative;
 }
 
-
+.tabla{
+    position: relative;
+    padding: 20px;
+}
 
 
 

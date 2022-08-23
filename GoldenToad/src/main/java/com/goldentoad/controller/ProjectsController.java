@@ -53,5 +53,13 @@ public class ProjectsController {
         projectsService.delete(idProjects);
         return "redirect:/projects";
     }
+    
+        @GetMapping("/portafolio")
+    public String login(Model model) {
+        List<Projects> listaProjects = projectsService.getAllProjects();
+        model.addAttribute("titulo", "Tabla Projects");
+        model.addAttribute("projects", listaProjects);
+        return "portafolio";
+    }
 
 }
