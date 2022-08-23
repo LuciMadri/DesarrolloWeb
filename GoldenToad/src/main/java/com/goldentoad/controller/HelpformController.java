@@ -119,10 +119,6 @@ public class HelpformController {
 //        return "redirect:/projects";
 //    }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
     @GetMapping("/index")
     public String index() {
@@ -136,10 +132,6 @@ public class HelpformController {
 //        return "login";
 //    }
 
-<<<<<<< Updated upstream
- 
-    
-=======
 //    @GetMapping("/portafolio")
 //    public String portafolio() {
 //
@@ -151,6 +143,4 @@ public class HelpformController {
 //
 //        return "contact";
     }
-
->>>>>>> Stashed changes
 
