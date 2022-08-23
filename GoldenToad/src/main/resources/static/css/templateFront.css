@@ -23,6 +23,7 @@ body{
 }
 
 nav{
+    display: inline-block;background-color: #1d1d1d;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,13 +88,13 @@ button:hover{
 body{
     font-family: 'Segoe UI';
     font-weight: 400;
-    background-color: #ededed;
 }
 
 .footer{
     padding: 40px 0;
     background-color: #fff;
     display: block;
+ 
 }
 
 .footer .social{

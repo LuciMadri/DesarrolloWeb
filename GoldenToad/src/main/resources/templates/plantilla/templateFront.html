@@ -65,12 +65,12 @@
                         <a href="#">Privacy Policy</a>
                     </li>
 
-                    <li>
+                    <li class="translate">
                         <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                                             th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
                                             class="nav-link px-0 text-muted">Spanish</a>
                     </li>
-                    <li>
+                    <li class="translate">
                         <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                                             th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
                                             class="nav-link px-0 text-muted">English</a>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head th:replace="plantilla/templateFront::head"></head>
+    <link rel="stylesheet" href="css/login.css"> 
+
+    <body>
+
+        <header th:replace="plantilla/templateFront::header"></header>
+
+        <form th:action="@{/login}" >
+            <fieldset>
+
+                <div th:if="${param.error}"class="alert alert-danger">
+                    Invalid username and password.
+                </div>
+
+                <div th:if="${param.logout}"class="alert alert-success">
+                    You have been logged out.
+                </div>
+                
+                <section class="form-login">
+                    
+                    <h4>LOG IN</h4>
+                    
+                    <input class="controls" type="text" name="username" id="nombres" placeholder="Enter your nickname">
+                    
+                    <input class="controls" type="password" name="password" id="apellidos" placeholder="Enter your password">
+                    
+                    <p>I agree with <a href='#'>Terms and Conditions </a></p>
+                    
+                    <input class="botons" type= "submit" value="Login">
+                    
+                    <p><a href="#">Already have an account?</a></p>
+                    
+                </section>
+                
+            </fieldset>
+
+        </form>
+
+
+    </body>
+
+
+</html>

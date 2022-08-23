@@ -34,6 +34,14 @@ public class MerchController {
         return "merch";
     }
     
+    @GetMapping("/home")
+    public String home(Model model) {
+        List<Merch> listaMerch = merchService.getAllMerch();
+        model.addAttribute("titulo", "Tabla Merch");
+        model.addAttribute("merch", listaMerch);
+        return "home";
+    }
+    
     
 
     @GetMapping("/merchN")

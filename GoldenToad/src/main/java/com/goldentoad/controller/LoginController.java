@@ -19,4 +19,10 @@ public class LoginController {
 
         return "login";
     }
+    
+    @GetMapping("/loginn")
+    public String loginn() {
+
+        return "loginn";
+    }
 }
