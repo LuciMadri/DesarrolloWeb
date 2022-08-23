@@ -8,6 +8,7 @@ import com.goldentoad.Service.IContactService;
 import com.goldentoad.entity.Contact;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 //import org.springframework.stereotype.Controller;
 
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  *
  * @author sebastiancarballo
  */
+@Controller
 public class ContactController {
     
  @Autowired
@@ -29,7 +31,7 @@ public class ContactController {
     @GetMapping("/contactN")
     public String contactN(Model model) {
         List<Contact> listContact = contactService.getAllContact();
-        model.addAttribute("titulo", "Contact Table");
+        model.addAttribute("titulo", "Contact");
         model.addAttribute("contact", listContact);
         return "contactN";
     }
@@ -47,14 +49,14 @@ public class ContactController {
     }
 
     @GetMapping("/editContact/{id_contact}")
-    public String editarContact(@PathVariable("id_contact") Integer idContact, Model model) {
+    public String editContact(@PathVariable("id_contact") Integer idContact, Model model) {
        Contact contact = contactService.getContactById(idContact);
         model.addAttribute("contact", contact);
         return "crearContact";
     }
 
     @GetMapping("/deleteContact/{id_contact}")
-    public String eliminarContact(@PathVariable("id_contact") Integer idContact) {
+    public String deleteContact(@PathVariable("id_contact") Integer idContact) {
         contactService.delete(idContact);
         return "redirect:/contactN";
     }
