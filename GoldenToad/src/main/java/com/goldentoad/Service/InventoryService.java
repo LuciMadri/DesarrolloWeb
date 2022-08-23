@@ -14,13 +14,31 @@ import org.springframework.stereotype.Service;
 @Service
 public class InventoryService implements IInventoryService{
     
-    //Autowired para la inyeccion de dependencias, en este caso Pais
+    //Autowired para la inyeccion de dependencias
     @Autowired
     private InventoryRepository inventoryRepository;
 
-    public List<Inventory> listInventory() {
-        //Aqui devolvemos una lista de paises de paisRepository.
-        return (List<Inventory>) inventoryRepository.findAll();
+    @Override
+    public List<Inventory> getAllInventory() {
+         return (List<Inventory>) inventoryRepository.findAll();
     }
+
+    @Override
+    public Inventory getInventoryById(long id_inventory) {
+        return inventoryRepository.findById(id_inventory).orElse(null);
+    }
+
+    @Override
+    public void saveInventory(Inventory inventory) {
+         inventoryRepository.save(inventory);
+    }
+
+  
+
+
+
+ 
+    
+    
     
 }

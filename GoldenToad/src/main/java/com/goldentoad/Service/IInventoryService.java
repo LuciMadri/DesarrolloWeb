@@ -13,6 +13,13 @@ import java.util.List;
  * @author madri
  */
 public interface IInventoryService {
-    
-    public List<Inventory> listInventory();
+
+    public List<Inventory> getAllInventory();
+
+    public Inventory getInventoryById(long id_inventory);
+
+    public void saveInventory(Inventory inventory);
+
+  
+
 }
