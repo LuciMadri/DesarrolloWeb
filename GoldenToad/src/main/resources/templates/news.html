@@ -7,6 +7,8 @@
 
 <body>
     <header th:replace="plantilla/templateFront::header"></header>
+    
+      <a sec:authorize="hasRole('ADMIN')" ></a>
 
     <div class="noticia1">
 

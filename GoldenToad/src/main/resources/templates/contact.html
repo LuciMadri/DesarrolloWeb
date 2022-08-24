@@ -9,6 +9,8 @@
 
 <body>
     <header th:replace="plantilla/templateFront::header"></header>
+    
+      <a sec:authorize="hasRole('ADMIN')" ></a>
 
     <div class ="content">
         <h1 th:text="#{contact.titulo}">Contact us</h1>

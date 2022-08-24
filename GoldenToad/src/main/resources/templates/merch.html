@@ -3,6 +3,8 @@
     <link rel="stylesheet" href="css/merch.css"> 
     <body>
         <header th:replace="plantilla/templateFront::header"></header>
+        
+          <a sec:authorize="hasRole('ADMIN')" ></a>
 
         <div class="tabla">
             <table class="table table-dark table-striped">

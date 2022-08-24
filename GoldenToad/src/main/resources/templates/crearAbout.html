@@ -9,6 +9,8 @@
         
         <header th:replace="plantilla/templateFront::header"></header>
         
+          <a sec:authorize="hasRole('ADMIN')" ></a>
+        
         <div class="container">
 
             <div class="card-header bg-black text-white"> </div>
