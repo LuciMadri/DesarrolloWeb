@@ -17,6 +17,7 @@
                     <th scope="col" th:text="#{about.nombre}"></th>
                     <th scope="col" th:text="#{about.apellido}"></th>
                     <th scope="col" th:text="#{about.descripcion}"></th>
+                    <th scope="col" th:text="#{about.link}"></th>
                     <th scope="col" th:text="#{accion.editar}"></th>
                     <th scope="col" th:text="#{accion.eliminar}"></th>
                 </tr>
@@ -30,6 +31,7 @@
                     <td th:text="${user.getFirstname_a}"></td>
                     <td th:text="${user.getLastname_a}"></td>
                     <td th:text="${user.getDescrip}"></td>
+                    <td th:text="${user.getLink}"></td>
                     <td>
                         <a th:href="@{/editarAbout/{id}(id=${user.getId_about})}">Edit</a>
                     </td>

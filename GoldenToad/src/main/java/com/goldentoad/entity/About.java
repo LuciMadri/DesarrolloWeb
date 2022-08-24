@@ -17,6 +17,7 @@ public class About {
     private String firstname_a;
     private String lastname_a;
     private String descrip;
+    private String link;
 
     public int getId_about() {
         return id_about;
@@ -48,6 +49,14 @@ public class About {
 
     public void setDescrip(String descrip) {
         this.descrip = descrip;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     
