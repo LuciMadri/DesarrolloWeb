@@ -71,7 +71,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("inventoryN","/crearInventory", "/merchN", "/aboutN", "/crearAbout", "/saveAbout", "/editAbout/{id_about}", "/deleteAbout/{id_about}", 
                         "/newsN", "/crearNews", "/save", "/editNews/{id_news}", "/delete/{id_news}",  "/contactN", "/crearContact", "/saveContact", "/editContact/{id_contact}", "/deleteContact/{id_contact}", 
                          "/helpform", "/crearHelpform", "/saveHelpform", "/editHelpform/{id_helpform}", "/deleteHelpform/{id_helpform}", 
-                        "/projectsN", "/crearProjects", "/saveProjects", "/editProjects/{id_projects}", "/delete/{id_projects}")
+                        "/projectsN", "/crearProjects", "/saveProjects", "/editProjects/{id_projects}", "/delete/{id_projects}","/reporte")
                 .hasRole("ADMIN")
                 .antMatchers("/about", "/home", "/index", "/login", "/portafolio", "/contact", "/projects", "/news", "/merch")
                 .hasAnyRole("USER", "ADMIN")

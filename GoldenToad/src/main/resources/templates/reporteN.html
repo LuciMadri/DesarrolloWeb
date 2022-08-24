@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head th:replace="plantilla/templateFront::head"></head>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <div class="card-body-about">
+            <img src="images/rep1.png" class="img-about" alt=""> 
+            <h5 class="fn" th:text="#{reporte.repo1}"></h5>
+            <h5 class="ln"></h5>
+            <p class="descrip"></p>
+            <a href="http://localhost/report/ventas/download?tipo=PDF" class="btn-about" th:text="#{reporte.repo2}" ></a>
+        </div>
+    <!-- comment   <form>
+    <a href="http://localhost/report/ventas/download?tipo=PDF">
+        <input type="button" value="click here">
+    </a>
+    </form> -->
+<!----------------------------------------------------------------------------->
+    <footer th:replace="plantilla/templateFront::footer"></footer>
+</body>
+</html>
