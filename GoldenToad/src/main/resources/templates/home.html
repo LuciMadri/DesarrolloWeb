@@ -27,7 +27,7 @@
             <p th:text="#{home.empieza}">
             </p>
 
-            <button type="button" th:text="#{home.ir}"></button>
+              <button type="button" th:text="#{home.ir}" th:href="portafolio"></button> 
 
 
 
@@ -56,7 +56,7 @@
                             <img th:src="${user.getLink}" class="img-about" alt=""> 
                             <h5 class="title" th:text="${user.getTitle}"></h5>
                             <p class="descrip" th:text="${user.getDescrip}"></p>
-                            <a href="merch" class="btn-about" th:text="#{accion.comprar}"></a>
+                            <a href="merch" class="btn-about" th:text="#{accion.prox}"></a>
                         </div>  
                         </tr>
 
