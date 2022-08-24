@@ -31,8 +31,17 @@
                         <li> <a th:text="#{home.titulo5}" th:href="about"></a></li>
                         <li> <a th:text="#{home.titulo6}" th:href="help2"></a></li>
                         <li> <a th:text="#{home.merch}" th:href="merch"></a></li>
+
                     </ul>
-                    <button th:text="#{home.titulo3}"type="button">Login</button>
+                    <ul>
+                        <li class="button">
+                            <form method="POST" th:action="@{/logout}">
+                                <a href="#" onclick="this.parentNode.submit();" class="nav-link">
+                                    [[#{plantilla.logout}]]
+                                </a>
+                            </form>
+                        </li>
+                    </ul>
                 </nav>
             </div>
 
@@ -67,13 +76,13 @@
 
                     <li class="translate">
                         <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                            th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
-                                            class="nav-link px-0 text-muted">Spanish</a>
+                           th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"
+                           class="nav-link px-0 text-muted">Spanish</a>
                     </li>
                     <li class="translate">
                         <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                                            th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
-                                            class="nav-link px-0 text-muted">English</a>
+                           th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"
+                           class="nav-link px-0 text-muted">English</a>
                     </li>
 
                 </ul>
