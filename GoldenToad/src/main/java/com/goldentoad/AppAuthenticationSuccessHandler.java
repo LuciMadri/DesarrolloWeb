@@ -1,4 +1,3 @@
-
 package com.goldentoad;
 
 import java.io.IOException;

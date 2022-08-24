@@ -55,8 +55,10 @@ public class NewsController {
     }
     
     @GetMapping("/news")
-    public String login() {
-
+    public String news(Model model) {
+        List<News> listNews = newsService.getAllNews();
+        model.addAttribute("titulo", "News Table");
+        model.addAttribute("news", listNews);
         return "news";
     }
 }
