@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="plantilla/template::head"></head>
-    <body>
-        <header th:replace="plantilla/template::header"></header>
+     <head>
+        <title>Golden Toad</title>
+        <head th:replace="plantilla/templateFront::head"></head>
         
+    </head>
+    <body>
+        <header th:replace="plantilla/templateFront::header"></header>
           <a sec:authorize="hasRole('ADMIN')" ></a>
        
           
@@ -15,7 +18,9 @@
                     <th scope="col" th:text="#{articulo.descripcion}"></th>
                     <th scope="col" th:text="#{articulo.fechasalida}"></th>
                     <th scope="col" th:text="#{articulo.newsid}"></th>
-                    
+                     <th scope="col" ></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +44,7 @@
         </tbody>
     </table>
         
-        <footer th:replace="plantilla/template::footer">
+        <footer th:replace="plantilla/templateFront::footer">
            
         </footer>
 </html>
